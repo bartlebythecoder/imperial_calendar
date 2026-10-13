@@ -60,6 +60,13 @@ export function renderClock(data) {
     <p class="clock__next">${nextLine}</p>`;
 }
 
+const LEGEND = `
+    <ul class="legend" aria-label="Legend">
+      <li class="t-party">Party</li><li class="t-news">News</li><li class="t-travel">Travel</li>
+      <li class="t-downtime">Downtime</li><li class="t-deadline">Deadline</li><li class="t-finance">Finance</li>
+      <li class="l-projected">Projected</li>
+    </ul>`;
+
 // ---------- Month view ----------
 
 /** Assigns each span overlapping [fromAbs, toAbs] a lane so strips line up across days. */
@@ -165,11 +172,7 @@ export function renderMonth(state) {
       ${WEEKDAYS.map((d) => `<div class="wkday" aria-hidden="true">${d.slice(0, 3)}</div>`).join("")}
       ${cells.join("")}
     </div>
-    <ul class="legend" aria-label="Legend">
-      <li class="t-party">Party</li><li class="t-news">News</li><li class="t-travel">Travel</li>
-      <li class="t-downtime">Downtime</li><li class="t-deadline">Deadline</li><li class="t-finance">Finance</li>
-      <li class="l-projected">Projected</li>
-    </ul>`;
+    ${LEGEND}`;
 }
 
 // ---------- Day panel ----------
@@ -212,4 +215,201 @@ export function renderDayPanel(state) {
     ${entries.length
       ? entries.map((e) => entryHtml(e, selected.abs, currentAbs)).join("")
       : `<p class="log__empty">${selected.abs > currentAbs ? "Nothing projected for this day." : "No log entries for this day."}</p>`}`;
+}
+
+// ---------- View switcher ----------
+
+export function renderViewNav(state) {
+  const { year, month, selected, view } = state;
+  const links = [
+    ["year", "Year", `#/${year}`],
+    ["month", "Month", selected ? `#/${selected.year}/${selected.day}` : `#/${year}/m${month}`],
+    ["chronicle", "Chronicle", "#/chronicle"],
+  ];
+  return links.map(([key, label, href]) =>
+    `<a class="tab${view === key ? " active" : ""}" href="${href}"${view === key ? ' aria-current="page"' : ""}>${label}</a>`,
+  ).join("");
+}
+
+// ---------- Year view ----------
+
+const TYPES_ORDER = ["party", "news", "travel", "downtime", "deadline", "finance"];
+
+/** Systems visited in order, from the group's own entries, collapsing repeats. */
+function routeFor(events, year) {
+  const route = [];
+  for (const e of events) {
+    if (e.start.year !== year || !e.system || !["party", "travel", "downtime"].includes(e.type)) continue;
+    if (/^in transit$/i.test(e.system)) continue;
+    if (route.at(-1) !== e.system) route.push(e.system);
+  }
+  return route;
+}
+
+function miniDay(day, year, data) {
+  const abs = toAbs(day, year);
+  const currentAbs = data.current.abs;
+  const starting = data.events.filter((e) => e.start.abs === abs);
+  const running = data.events.filter((e) => isSpan(e) && covers(e, abs));
+  const lead = starting.find((e) => !isSpan(e));
+  const strip = running[0];
+  const cls = [
+    "mini", timeClass(abs, currentAbs), lead && "has", lead && `t-${lead.type}`, strip && "span",
+  ].filter(Boolean).join(" ");
+  const stripStyle = strip ? ` style="--s: var(--t-${strip.type})"` : "";
+  const titles = [...new Set([...starting, ...running])].map((e) => e.title);
+  const tip = `${formatDate(day, year)}${titles.length ? ` · ${titles.join(" · ")}` : ""}`;
+  return `<a class="${cls}" href="#/${year}/${day}"${stripStyle} title="${escapeHtml(tip)}">${String(day).padStart(3, "0")}</a>`;
+}
+
+function monthTile(month, year, data) {
+  const { first, last } = monthRange(month);
+  const fromAbs = toAbs(first, year);
+  const lastAbs = toAbs(last, year);
+  const currentAbs = data.current.abs;
+  const inMonth = data.events.filter((e) => e.start.abs >= fromAbs && e.start.abs <= lastAbs);
+  const isNow = currentAbs >= fromAbs && currentAbs <= lastAbs;
+
+  const days = [];
+  for (let d = first; d <= last; d++) days.push(miniDay(d, year, data));
+
+  const shown = inMonth.slice(0, 3).map((e) =>
+    `<li class="t-${e.type}${e.start.abs > currentAbs ? " projected" : ""}"><span class="d">${String(e.start.day).padStart(3, "0")}</span>${escapeHtml(e.title)}</li>`,
+  );
+  if (inMonth.length > 3) shown.push(`<li class="more">+${inMonth.length - 3} more</li>`);
+
+  return `
+    <section class="tile${isNow ? " now" : ""}">
+      <a class="tile__head" href="#/${year}/m${month}">
+        <span class="tile__name">Month ${pad2(month)}</span>
+        <span class="tile__range">${String(first).padStart(3, "0")}–${String(last).padStart(3, "0")}</span>
+      </a>
+      <div class="minigrid">
+        ${WEEKDAYS.map((d) => `<span class="mini__wk" aria-hidden="true">${d[0]}</span>`).join("")}
+        ${days.join("")}
+      </div>
+      ${shown.length ? `<ul class="tile__list">${shown.join("")}</ul>` : `<p class="tile__empty">No entries</p>`}
+    </section>`;
+}
+
+export function renderYear(state) {
+  const { year, data } = state;
+  const inYear = data.events.filter((e) => e.start.year === year);
+  const counts = TYPES_ORDER.map((t) => [t, inYear.filter((e) => e.type === t).length]);
+  const sessions = [...new Set(inYear.flatMap((e) => e.sessions))].sort((a, b) => a - b);
+  const route = routeFor(data.events, year);
+  const logged = inYear.filter((e) => e.start.abs <= data.current.abs).at(-1);
+
+  const holidayAbs = toAbs(1, year);
+  const onHoliday = data.events.filter((e) => covers(e, holidayAbs));
+
+  const tiles = [];
+  for (let m = 1; m <= 13; m++) tiles.push(monthTile(m, year, data));
+
+  return `
+    <div class="bar">
+      <h2>Year ${year}</h2>
+      <span class="bar__range">${inYear.length} entries${logged ? ` · last logged ${formatDate(logged.start.day, logged.start.year)}` : ""}</span>
+      <div class="bar__nav">
+        <button class="btn" data-go="prev" title="Previous year (←)">◄ ${year - 1}</button>
+        <button class="btn" data-go="today" title="Jump to today (T)">Today</button>
+        <button class="btn" data-go="next" title="Next year (→)">${year + 1} ►</button>
+      </div>
+    </div>
+    <a class="holiday" href="#/${year}/1">
+      <span class="num">001</span><span class="label">HOLIDAY</span>
+      <span class="evts">${onHoliday.map((e) => escapeHtml(e.title)).join(" · ") || "No entries"}</span>
+    </a>
+    <div class="tiles">
+      ${tiles.join("")}
+      <section class="tile glance">
+        <h3 class="glance__title">${year} at a glance</h3>
+        <dl class="glance__counts">
+          ${counts.map(([t, n]) => `<div class="t-${t}"><dt>${t}</dt><dd>${n}</dd></div>`).join("")}
+        </dl>
+        ${sessions.length ? `<p class="glance__line"><span>Sessions</span>${sessionLabel(sessions).replace(/^Sessions? /, "")}</p>` : ""}
+        ${route.length ? `<p class="glance__line"><span>Route</span>${route.map(escapeHtml).join(' <b aria-hidden="true">›</b> ')}</p>` : ""}
+      </section>
+    </div>
+    ${LEGEND}`;
+}
+
+// ---------- Chronicle ----------
+
+function periodOf(day, year) {
+  if (isHoliday(day)) return { key: `${year}-00`, label: `Holiday · ${year}`, href: `#/${year}/1` };
+  const m = monthOf(day);
+  const { first, last } = monthRange(m);
+  return {
+    key: `${year}-${pad2(m)}`,
+    label: `Month ${pad2(m)} · ${year}`,
+    range: `Days ${String(first).padStart(3, "0")}–${String(last).padStart(3, "0")}`,
+    href: `#/${year}/m${m}`,
+  };
+}
+
+function chronicleEntry(e, currentAbs) {
+  const projected = e.start.abs > currentAbs;
+  const date = isSpan(e)
+    ? `${String(e.start.day).padStart(3, "0")}<small>to ${formatDate(e.end.day, e.end.year)}</small>`
+    : `${String(e.start.day).padStart(3, "0")}<small>${weekdayName(e.start.day)}</small>`;
+  const paragraphs = e.text ? e.text.split("\n\n").map((p) => `<p>${escapeHtml(p)}</p>`).join("") : "";
+  const sessions = sessionLabel(e.sessions);
+  return `
+    <article class="rec t-${e.type}${projected ? " projected" : ""}">
+      <a class="rec__date" href="#/${e.start.year}/${e.start.day}" title="Open in Month view">${date}</a>
+      <div class="rec__body">
+        <p class="entry__kicker">
+          <span class="entry__type">${e.type}</span>
+          ${projected ? `<span class="entry__proj">Projected</span>` : ""}
+          ${e.location ? `<span class="entry__span">${escapeHtml(e.location)}</span>` : ""}
+        </p>
+        <h3>${escapeHtml(e.title)}</h3>
+        ${paragraphs ? `<div class="entry__text">${paragraphs}</div>` : ""}
+        ${sessions ? `<span class="chip">${sessions}</span>` : ""}
+      </div>
+    </article>`;
+}
+
+export function renderChronicle(state) {
+  const { data, order } = state;
+  const currentAbs = data.current.abs;
+  const newest = order !== "oldest";
+  const events = [...data.events].sort((a, b) => (newest ? b.start.abs - a.start.abs : a.start.abs - b.start.abs));
+
+  const today = `
+    <div class="nowline" id="today-line">
+      <span>▶ Today · ${formatDate(data.current.day, data.current.year)}</span>
+    </div>`;
+  const out = [];
+  let period = null;
+  let todayShown = false;
+  for (const e of events) {
+    // The divider sits between projected entries and logged ones.
+    const future = e.start.abs > currentAbs;
+    if (!todayShown && (newest ? !future : future)) {
+      out.push(today);
+      todayShown = true;
+      period = null; // repeat the month heading after the divider
+    }
+    const p = periodOf(e.start.day, e.start.year);
+    if (p.key !== period) {
+      period = p.key;
+      out.push(`<h3 class="period"><a href="${p.href}">${p.label}</a>${p.range ? `<span>${p.range}</span>` : ""}</h3>`);
+    }
+    out.push(chronicleEntry(e, currentAbs));
+  }
+  if (!todayShown) out.push(today);
+
+  return `
+    <div class="bar">
+      <h2>Chronicle</h2>
+      <span class="bar__range">${events.length} entries · ${newest ? "newest first" : "oldest first"}</span>
+      <div class="bar__nav">
+        <a class="btn" href="#/chronicle${newest ? "/oldest" : ""}">${newest ? "Oldest first" : "Newest first"}</a>
+        <button class="btn" data-go="today" title="Scroll to today (T)">Today</button>
+      </div>
+    </div>
+    <div class="chron">${out.join("")}</div>
+    ${LEGEND}`;
 }

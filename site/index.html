@@ -11,11 +11,14 @@
   <link rel="stylesheet" href="css/calendar.css">
 </head>
 <body>
-  <header class="clock" id="clock">
-    <p class="status">Reading ship's log…</p>
+  <header class="top">
+    <div class="clock" id="clock">
+      <p class="status">Reading ship's log…</p>
+    </div>
+    <nav class="tabs" id="views" aria-label="Views"></nav>
   </header>
-  <div class="deck">
-    <main id="month"></main>
+  <div class="deck" id="deck">
+    <main id="main"></main>
     <aside class="log" id="log" aria-live="polite"></aside>
   </div>
   <script type="module" src="js/app.js"></script>
