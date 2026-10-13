@@ -53,10 +53,10 @@ and recovering the mysterious orb.
 | --- | --- |
 | `current_date` | In the frontmatter. "Today" on the calendar; later entries show as forecasts. |
 | `## ` heading | One per entry: a date (`DDD-YYYY`, or `DDD-YYYY to DDD-YYYY` for a span), ` - `, then a short title for calendar cells. |
-| `where:` | Optional. A place, or `Place / System`; the part after the last `/` is used for the system filter. |
+| `where:` | Optional. A place, or `Place / System`; the part after the last `/` is used for the system filter. Each part links to its wiki page automatically when one exists. |
 | `type:` | Optional. One of the six types below; defaults to `party`. |
 | `aar:` | Optional. AAR links, e.g. `[[ss6_aar_summary_31_32]]`. Shown as "Sessions 31–32". The AARs themselves are not published. |
-| Description | Any paragraphs after the fields. Wiki links show as plain text, using the alias when given. |
+| Description | Any paragraphs after the fields. `[[links]]` to wiki pages (matched by file name, title or alias) become links to the players' wiki; other links show as plain text and are listed in the publish output. Links in the heading show as plain text. |
 | `# 1105` | Year headings, for reading only; ignored. Anything before the first entry is ignored too. |
 
 | Type | Meaning |
@@ -191,7 +191,6 @@ GitHub Pages redeploys about a minute later.
 ## 9. Later
 
 - **Hours:** `207-1105 1600` in entries and in `current_date`, plus an hourly day view.
-- **Wiki links:** `[[sarik]]` → `bartlebythecoder.github.io/bias_ccr_bot/sarik`, and a Calendar link in the wiki's menu.
 - **Bot:** the BIAS CCR Bot reads `calendar.json`.
 - **AARs:** publish them and link them from session chips.
 - **Recurring entries:** automatic recurring finance entries.

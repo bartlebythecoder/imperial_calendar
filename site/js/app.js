@@ -9,7 +9,7 @@
 
 import { toAbs, fromAbs, monthOf, monthRange, MONTHS_PER_YEAR, isValidDay } from "./calendar-math.js";
 import {
-  renderClock, renderViewNav, renderMonth, renderDayPanel, renderYear, renderChronicle, searchPattern,
+  renderClock, renderViewNav, renderMonth, renderDayPanel, renderYear, renderChronicle, searchPattern, plainText,
 } from "./views.js";
 
 const $ = (id) => document.getElementById(id);
@@ -31,7 +31,7 @@ function matches(e) {
   if (!types.has(e.type)) return false;
   if (system && e.system !== system) return false;
   const pattern = searchPattern(query);
-  if (pattern && !pattern.test(`${e.title}\n${e.text}\n${e.location ?? ""}`)) return false;
+  if (pattern && !pattern.test(`${e.title}\n${plainText(e.text)}\n${e.location ?? ""}`)) return false;
   return true;
 }
 

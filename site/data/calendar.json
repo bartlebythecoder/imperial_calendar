@@ -4,6 +4,7 @@
     "year": 1105,
     "abs": 403536
   },
+  "wiki": "https://bartlebythecoder.github.io/bias_ccr_bot/",
   "events": [
     {
       "id": "1104-304",
@@ -21,8 +22,14 @@
       "type": "news",
       "location": "Vale do Paraiso",
       "system": "Vale do Paraiso",
+      "places": [
+        {
+          "name": "Vale do Paraiso",
+          "slug": null
+        }
+      ],
       "sessions": [],
-      "text": "SuSAG announced development of the DeLeon anagathic drug."
+      "text": "source: ss6 news 1105 vol 2\n\nSuSAG announced development of the DeLeon anagathic drug."
     },
     {
       "id": "1104-353",
@@ -40,8 +47,14 @@
       "type": "news",
       "location": "Pleasant Hill",
       "system": "Pleasant Hill",
+      "places": [
+        {
+          "name": "Pleasant Hill",
+          "slug": "pleasant-hill"
+        }
+      ],
       "sessions": [],
-      "text": "The system ceded authority to the Children of the Psalms with Duke Dulinor's support."
+      "text": "source: ss6 news 1105 vol 2\n\nThe system ceded authority to the Children of the Psalms with Duke Dulinor's support."
     },
     {
       "id": "1105-001",
@@ -59,8 +72,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Wu-Ketai announced successful breeding of uplifted simians."
+      "text": "source: ss6 news 1105 vol 1\n\nWu-Ketai announced successful breeding of uplifted simians."
     },
     {
       "id": "1105-003",
@@ -78,8 +101,14 @@
       "type": "news",
       "location": "Sanlucar de Barram",
       "system": "Sanlucar de Barram",
+      "places": [
+        {
+          "name": "Sanlucar de Barram",
+          "slug": "sanlucar-de-barram"
+        }
+      ],
       "sessions": [],
-      "text": "The Aridush Freedom Fighters under Giuliana Weber overthrew the Valentian government and took control of the moon."
+      "text": "source: ss6 news 1105 vol 1\n\nThe Aridush Freedom Fighters under Giuliana Weber overthrew the Valentian government and took control of the moon."
     },
     {
       "id": "1105-018",
@@ -97,8 +126,18 @@
       "type": "news",
       "location": "Erebus / LaChat",
       "system": "LaChat",
+      "places": [
+        {
+          "name": "Erebus",
+          "slug": null
+        },
+        {
+          "name": "LaChat",
+          "slug": "lachat"
+        }
+      ],
       "sessions": [],
-      "text": "Sir Byron Falcon Power announced the Alexandria computer archive."
+      "text": "source: ss6 news 1105 vol 1\n\nSir Byron Falcon Power announced the Alexandria computer archive."
     },
     {
       "id": "1105-022",
@@ -116,6 +155,12 @@
       "type": "travel",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [],
       "text": "BIAS CCR departed for Mirassol via a 30-hour shuttle."
     },
@@ -135,6 +180,12 @@
       "type": "party",
       "location": "Mirassol",
       "system": "Mirassol",
+      "places": [
+        {
+          "name": "Mirassol",
+          "slug": "mirassol"
+        }
+      ],
       "sessions": [
         1,
         2,
@@ -160,8 +211,14 @@
       "type": "news",
       "location": "Nesvorny",
       "system": "Nesvorny",
+      "places": [
+        {
+          "name": "Nesvorny",
+          "slug": "nesvorny"
+        }
+      ],
       "sessions": [],
-      "text": "The Nesvorny government announced an MCr 45.0 Pharr care package from the Rimward Circuit Collective."
+      "text": "source: ss6 news 1105 vol 1\n\nThe Nesvorny government announced an MCr 45.0 Pharr care package from the Rimward Circuit Collective."
     },
     {
       "id": "1105-030",
@@ -179,8 +236,14 @@
       "type": "news",
       "location": "Kidderminster",
       "system": "Kidderminster",
+      "places": [
+        {
+          "name": "Kidderminster",
+          "slug": "kidderminster"
+        }
+      ],
       "sessions": [],
-      "text": "Peace talks with Sanlucar de Barram stalled over a war crimes dispute."
+      "text": "source: ss6 news 1105 vol 2\n\nPeace talks with Sanlucar de Barram stalled over a war crimes dispute."
     },
     {
       "id": "1105-033",
@@ -198,8 +261,14 @@
       "type": "news",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [],
-      "text": "Imperial officials expanded ship permissions to the major Line Companies."
+      "text": "source: ss6 news 1105 vol 1\n\nImperial officials expanded ship permissions to the major Line Companies."
     },
     {
       "id": "1105-034",
@@ -217,8 +286,14 @@
       "type": "news",
       "location": "Kidderminster",
       "system": "Kidderminster",
+      "places": [
+        {
+          "name": "Kidderminster",
+          "slug": "kidderminster"
+        }
+      ],
       "sessions": [],
-      "text": "Kidderminster formally recognized the Aridush-led Commonwealth States as the legitimate government of Sanlucar, ending the crisis."
+      "text": "source: ss6 news 1105 vol 3\n\nKidderminster formally recognized the Aridush-led Commonwealth States as the legitimate government of Sanlucar, ending the crisis."
     },
     {
       "id": "1105-035",
@@ -236,8 +311,14 @@
       "type": "news",
       "location": "Sanlucar de Barram",
       "system": "Sanlucar de Barram",
+      "places": [
+        {
+          "name": "Sanlucar de Barram",
+          "slug": "sanlucar-de-barram"
+        }
+      ],
       "sessions": [],
-      "text": "Sanlucar requested life support and infrastructure experts, asking well-wishers to defer travel."
+      "text": "source: ss6 news 1105 vol 4\n\nSanlucar requested life support and infrastructure experts, asking well-wishers to defer travel."
     },
     {
       "id": "1105-035-2",
@@ -255,8 +336,14 @@
       "type": "news",
       "location": "Maseru",
       "system": "Maseru",
+      "places": [
+        {
+          "name": "Maseru",
+          "slug": "maseru"
+        }
+      ],
       "sessions": [],
-      "text": "Maseru's prison moons saw a record influx of inmates amid delays to penal colony expansions."
+      "text": "source: ss6 news 1105 vol 4\n\nMaseru's prison moons saw a record influx of inmates amid delays to penal colony expansions."
     },
     {
       "id": "1105-035-3",
@@ -274,8 +361,14 @@
       "type": "news",
       "location": "Beaumont",
       "system": "Beaumont",
+      "places": [
+        {
+          "name": "Beaumont",
+          "slug": "beaumont"
+        }
+      ],
       "sessions": [],
-      "text": "Supreme Leader Volkov urged the Imperium to keep a close watch on the new Sanlucar government."
+      "text": "source: ss6 news 1105 vol 4\n\nSupreme Leader Volkov urged the Imperium to keep a close watch on the new Sanlucar government."
     },
     {
       "id": "1105-035-4",
@@ -293,6 +386,12 @@
       "type": "party",
       "location": "Mirassol",
       "system": "Mirassol",
+      "places": [
+        {
+          "name": "Mirassol",
+          "slug": "mirassol"
+        }
+      ],
       "sessions": [
         8
       ],
@@ -314,6 +413,12 @@
       "type": "travel",
       "location": "In transit",
       "system": "In transit",
+      "places": [
+        {
+          "name": "In transit",
+          "slug": null
+        }
+      ],
       "sessions": [
         9
       ],
@@ -335,6 +440,12 @@
       "type": "party",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [
         10
       ],
@@ -356,6 +467,12 @@
       "type": "party",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [
         11
       ],
@@ -377,6 +494,12 @@
       "type": "party",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [
         12
       ],
@@ -398,8 +521,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "The Torus residents celebrated their centennial anniversary with lavish festivities and tightened security."
+      "text": "source: ss6 news 1105 vol 4\n\nThe Torus residents celebrated their centennial anniversary with lavish festivities and tightened security."
     },
     {
       "id": "1105-043",
@@ -417,6 +550,12 @@
       "type": "party",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [
         13
       ],
@@ -438,6 +577,12 @@
       "type": "party",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [
         14,
         15,
@@ -462,8 +607,14 @@
       "type": "news",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [],
-      "text": "The Imperial Navy lifted all travel restrictions to Romentino, restoring Green status."
+      "text": "source: ss6 news 1105 vol 3\n\nThe Imperial Navy lifted all travel restrictions to Romentino, restoring Green status."
     },
     {
       "id": "1105-047",
@@ -481,6 +632,12 @@
       "type": "party",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [
         18,
         19,
@@ -504,8 +661,14 @@
       "type": "news",
       "location": "Kidderminster",
       "system": "Kidderminster",
+      "places": [
+        {
+          "name": "Kidderminster",
+          "slug": "kidderminster"
+        }
+      ],
       "sessions": [],
-      "text": "Duchess Margaret announced a subsector-wide cultural exchange initiative and grand tour."
+      "text": "source: ss6 news 1105 vol 4\n\nDuchess Margaret announced a subsector-wide cultural exchange initiative and grand tour."
     },
     {
       "id": "1105-051",
@@ -523,8 +686,14 @@
       "type": "news",
       "location": "Romentino",
       "system": "Romentino",
+      "places": [
+        {
+          "name": "Romentino",
+          "slug": "romentino"
+        }
+      ],
       "sessions": [],
-      "text": "The Red Hand claimed an attack that destroyed the Morella Mining outpost, killing all employees. Sweeps killed 45 Red Hand members including its leaders."
+      "text": "source: ss6 news 1105 vol 5\n\nThe Red Hand claimed an attack that destroyed the Morella Mining outpost, killing all employees. Sweeps killed 45 Red Hand members including its leaders."
     },
     {
       "id": "1105-054",
@@ -542,6 +711,12 @@
       "type": "travel",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         20
       ],
@@ -563,6 +738,12 @@
       "type": "travel",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         21
       ],
@@ -584,8 +765,14 @@
       "type": "news",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [],
-      "text": "Local reports covered a medical black market boom, an underworld power struggle, smuggling crackdowns, a housing crisis, trade negotiations, an art authenticity dispute, and gala preparations."
+      "text": "source: ss6 news 1105 vol 4\n\nLocal reports covered a medical black market boom, an underworld power struggle, smuggling crackdowns, a housing crisis, trade negotiations, an art authenticity dispute, and gala preparations."
     },
     {
       "id": "1105-057",
@@ -603,6 +790,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         22,
         23
@@ -625,6 +818,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         22,
         23
@@ -647,6 +846,12 @@
       "type": "downtime",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [],
       "text": "The BIAS CCR group entered a private clinic for augmentation surgery, recovery and physio."
     },
@@ -666,8 +871,14 @@
       "type": "news",
       "location": "Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [],
-      "text": "Youst Refining was named sole refinery for all Hexham Mining output."
+      "text": "source: ss6 news 1105 vol 5.1\n\nYoust Refining was named sole refinery for all Hexham Mining output."
     },
     {
       "id": "1105-077",
@@ -685,8 +896,14 @@
       "type": "news",
       "location": "Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [],
-      "text": "Foust Refinery began tripling its workforce, signing a prisoner work contract with the Ouro Correction department."
+      "text": "source: ss6 news 1105 vol 5.1\n\nFoust Refinery began tripling its workforce, signing a prisoner work contract with the Ouro Correction department."
     },
     {
       "id": "1105-079",
@@ -704,8 +921,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Wu-Ketai confirmed its uplifted apes were \"out in the field\" with a closed circle of customers, though not yet available to the general public."
+      "text": "source: ss6 news 1105 vol 5\n\nWu-Ketai confirmed its uplifted apes were \"out in the field\" with a closed circle of customers, though not yet available to the general public."
     },
     {
       "id": "1105-080",
@@ -723,8 +950,14 @@
       "type": "news",
       "location": "Tutin",
       "system": "Tutin",
+      "places": [
+        {
+          "name": "Tutin",
+          "slug": null
+        }
+      ],
       "sessions": [],
-      "text": "A letter warned \"S\" that a man with a fake smile and missing fingers was asking around town for him."
+      "text": "source: ss6 letter 1105 091 a sterlings\n\nA letter warned \"S\" that a man with a fake smile and missing fingers was asking around town for him."
     },
     {
       "id": "1105-080-2",
@@ -742,8 +975,14 @@
       "type": "news",
       "location": "Kidderminster",
       "system": "Kidderminster",
+      "places": [
+        {
+          "name": "Kidderminster",
+          "slug": "kidderminster"
+        }
+      ],
       "sessions": [],
-      "text": "Lord Baltimore reported that Tres had threatened to hand Dr. Smart to the Blackshirts, the Morella outpost was destroyed hours after BIAS CCR left, and the Banks declared war on the Red Hand."
+      "text": "source: ss6 letter 1105 080 lord baltimore\n\nLord Baltimore reported that Tres had threatened to hand Dr. Smart to the Blackshirts, the Morella outpost was destroyed hours after BIAS CCR left, and the Banks declared war on the Red Hand."
     },
     {
       "id": "1105-087",
@@ -761,8 +1000,14 @@
       "type": "news",
       "location": "Nesvorny",
       "system": "Nesvorny",
+      "places": [
+        {
+          "name": "Nesvorny",
+          "slug": "nesvorny"
+        }
+      ],
       "sessions": [],
-      "text": "Nesvorny University scholars presented controversial research linking Ancient civilizations to genetically altered local fauna."
+      "text": "source: ss6 news 1105 vol 6\n\nNesvorny University scholars presented controversial research linking Ancient civilizations to genetically altered local fauna."
     },
     {
       "id": "1105-089",
@@ -780,6 +1025,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         24
       ],
@@ -801,6 +1052,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         25
       ],
@@ -822,6 +1079,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         26
       ],
@@ -843,6 +1106,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         27
       ],
@@ -864,8 +1133,14 @@
       "type": "news",
       "location": "Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [],
-      "text": "A shortage of contra-grav lifters hit independent corporations as supply was tied up in exclusive deals."
+      "text": "source: ss6 news 1105 vol 5.1\n\nA shortage of contra-grav lifters hit independent corporations as supply was tied up in exclusive deals."
     },
     {
       "id": "1105-093",
@@ -883,6 +1158,16 @@
       "type": "party",
       "location": "Basin City / Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Basin City",
+          "slug": "basin-city"
+        },
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         28
       ],
@@ -904,8 +1189,14 @@
       "type": "news",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [],
-      "text": "Kidderminster singing sensation Sabrina planned a series of concerts on Csabai as part of the Duchess Margaret Cultural Exchange Tour."
+      "text": "source: ss6 news 1105 vol 5\n\nKidderminster singing sensation Sabrina planned a series of concerts on Csabai as part of the Duchess Margaret Cultural Exchange Tour."
     },
     {
       "id": "1105-094",
@@ -923,6 +1214,12 @@
       "type": "party",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         29,
         30
@@ -945,8 +1242,14 @@
       "type": "news",
       "location": "Sanlucar de Barram",
       "system": "Sanlucar de Barram",
+      "places": [
+        {
+          "name": "Sanlucar de Barram",
+          "slug": "sanlucar-de-barram"
+        }
+      ],
       "sessions": [],
-      "text": "President Weber appealed for interstellar aid as reconstruction was hampered by shortages of heavy construction equipment."
+      "text": "source: ss6 news 1105 vol 6\n\nPresident Weber appealed for interstellar aid as reconstruction was hampered by shortages of heavy construction equipment."
     },
     {
       "id": "1105-098",
@@ -964,8 +1267,14 @@
       "type": "news",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [],
-      "text": "Authorities arrested three people including Darlene Suitor, head of the Csabai Psalmist Center, over an illegal drug ring."
+      "text": "source: ss6 news 1105 vol 6\n\nAuthorities arrested three people including Darlene Suitor, head of the Csabai Psalmist Center, over an illegal drug ring."
     },
     {
       "id": "1105-099",
@@ -983,6 +1292,12 @@
       "type": "travel",
       "location": "Csabai",
       "system": "Csabai",
+      "places": [
+        {
+          "name": "Csabai",
+          "slug": "csabai"
+        }
+      ],
       "sessions": [
         30
       ],
@@ -1004,8 +1319,14 @@
       "type": "news",
       "location": "Kidderminster",
       "system": "Kidderminster",
+      "places": [
+        {
+          "name": "Kidderminster",
+          "slug": "kidderminster"
+        }
+      ],
       "sessions": [],
-      "text": "The Kidderminster Stock Exchange saw record trading volume as speculators bet big on Sanlucar pressure crystal futures."
+      "text": "source: ss6 news 1105 vol 6\n\nThe Kidderminster Stock Exchange saw record trading volume as speculators bet big on Sanlucar pressure crystal futures."
     },
     {
       "id": "1105-103",
@@ -1023,6 +1344,12 @@
       "type": "travel",
       "location": "Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [
         30
       ],
@@ -1044,6 +1371,16 @@
       "type": "party",
       "location": "Foust Refinery / Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Foust Refinery",
+          "slug": "foust-refinery"
+        },
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [
         31,
         32
@@ -1066,6 +1403,16 @@
       "type": "party",
       "location": "Foust Refinery / Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Foust Refinery",
+          "slug": "foust-refinery"
+        },
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [
         31,
         32
@@ -1088,6 +1435,12 @@
       "type": "travel",
       "location": "Marcolandia",
       "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
       "sessions": [
         33
       ],
@@ -1109,6 +1462,16 @@
       "type": "travel",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         33
       ],
@@ -1130,8 +1493,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "An angry mob in Freeport's Cairo district killed Dario Caminante, a man accused of telepathy, amid anti-telepath hysteria."
+      "text": "source: ss6 news 1105 vol 6\n\nAn angry mob in Freeport's Cairo district killed Dario Caminante, a man accused of telepathy, amid anti-telepath hysteria."
     },
     {
       "id": "1105-113-3",
@@ -1149,8 +1522,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Louise Soto, a Wu-Ketai graphic designer, was shot dead by a masked gunman in The Lux in the Humboldt District."
+      "text": "source: ss6 news 1105 vol 7\n\nLouise Soto, a Wu-Ketai graphic designer, was shot dead by a masked gunman in The Lux in the Humboldt District."
     },
     {
       "id": "1105-114",
@@ -1168,6 +1551,16 @@
       "type": "party",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         33
       ],
@@ -1189,6 +1582,16 @@
       "type": "party",
       "location": "Suliman / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Suliman",
+          "slug": "suliman"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         34,
         35
@@ -1211,6 +1614,16 @@
       "type": "party",
       "location": "Suliman / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Suliman",
+          "slug": "suliman"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         36,
         37
@@ -1233,6 +1646,16 @@
       "type": "party",
       "location": "Suliman / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Suliman",
+          "slug": "suliman"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         38,
         39
@@ -1255,6 +1678,16 @@
       "type": "party",
       "location": "Eternity Station / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Eternity Station",
+          "slug": "eternity-station"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         40
       ],
@@ -1276,6 +1709,16 @@
       "type": "party",
       "location": "Eternity Station / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Eternity Station",
+          "slug": "eternity-station"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         41,
         42,
@@ -1299,6 +1742,16 @@
       "type": "downtime",
       "location": "Eternity Station / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Eternity Station",
+          "slug": "eternity-station"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         44
       ],
@@ -1320,8 +1773,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Sabrina planned to visit Freeport from 145-1105 for two weeks as part of the Duchess Margaret Cultural Exchange Tour."
+      "text": "source: ss6 news 1105 vol 8\n\nSabrina planned to visit Freeport from 145-1105 for two weeks as part of the Duchess Margaret Cultural Exchange Tour."
     },
     {
       "id": "1105-130",
@@ -1339,6 +1802,16 @@
       "type": "party",
       "location": "Freeport / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Freeport",
+          "slug": "freeport"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         45
       ],
@@ -1360,8 +1833,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Anti-psionic vigilantes stormed a housing project in the Cairo district, lynching a mother and daughter; three vigilantes were killed by authorities. Martial law was declared."
+      "text": "source: ss6 news 1105 vol 8\n\nAnti-psionic vigilantes stormed a housing project in the Cairo district, lynching a mother and daughter; three vigilantes were killed by authorities. Martial law was declared."
     },
     {
       "id": "1105-131",
@@ -1379,6 +1862,16 @@
       "type": "party",
       "location": "Freeport / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Freeport",
+          "slug": "freeport"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         47,
         48,
@@ -1402,8 +1895,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Lenders Montanes Financial and Jollynn Trust posted record profits, while Tagarro Trust missed expectations."
+      "text": "source: ss6 news 1105 vol 8\n\nLenders Montanes Financial and Jollynn Trust posted record profits, while Tagarro Trust missed expectations."
     },
     {
       "id": "1105-131-3",
@@ -1421,8 +1924,18 @@
       "type": "news",
       "location": "Eternity Station / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Eternity Station",
+          "slug": "eternity-station"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "After the Stratemeyer executions of hostages, Reidmar called a general strike on Eternity Station, halting all ship traffic."
+      "text": "source: ss6 news 1105 vol 8\n\nAfter the Stratemeyer executions of hostages, Reidmar called a general strike on Eternity Station, halting all ship traffic."
     },
     {
       "id": "1105-132",
@@ -1440,13 +1953,23 @@
       "type": "party",
       "location": "Freeport / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Freeport",
+          "slug": "freeport"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         50,
         51,
         52,
         53
       ],
-      "text": "The team resumed the search for Louise Soto's killer and the connection to Conde Borbon. They heard from Leeluz and headed to the Stardust, then made their way to Cafe Dimitri and found some dead gangsters. They went to Park 32 to save Starca and found a man with a gun. Sky disarmed him, and they went to meet Winslow Leach, whom they intimidated into handing over his phone."
+      "text": "The team resumed the search for Louise Soto's killer and the connection to Conde Borbon. They heard from Leeluz and headed to the Stardust, then made their way to [[cafe-dimitri|Cafe Dimitri]] and found some dead gangsters. They went to Park 32 to save Starca and found a man with a gun. Sky disarmed him, and they went to meet Winslow Leach, whom they intimidated into handing over his phone."
     },
     {
       "id": "1105-133",
@@ -1464,6 +1987,16 @@
       "type": "party",
       "location": "Freeport / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Freeport",
+          "slug": "freeport"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [
         54,
         55,
@@ -1488,8 +2021,18 @@
       "type": "news",
       "location": "Arico El Nuevo / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Financier Orslo Jollynn was found murdered at her mansion in a gangland-style execution, revealed to be the clandestine leader of the Stratemeyer Syndicate."
+      "text": "source: ss6 news 1105 vol 9\n\nFinancier Orslo Jollynn was found murdered at her mansion in a gangland-style execution, revealed to be the clandestine leader of the Stratemeyer Syndicate."
     },
     {
       "id": "1105-136",
@@ -1507,8 +2050,18 @@
       "type": "downtime",
       "location": "Eternity Station / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Eternity Station",
+          "slug": "eternity-station"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Back at Eternity Station, preparing for the trip to Metropolis Station: self-improvement, gathering rumours, buying equipment and improving the ship."
+      "text": "Back at Eternity Station, preparing for the trip to [[metropolis-station|Metropolis Station]]: self-improvement, gathering rumours, buying equipment and improving the ship."
     },
     {
       "id": "1105-170",
@@ -1526,8 +2079,14 @@
       "type": "news",
       "location": "Subsector-wide",
       "system": "Subsector-wide",
+      "places": [
+        {
+          "name": "Subsector-wide",
+          "slug": null
+        }
+      ],
       "sessions": [],
-      "text": "Hortalez et Cie won a major contract managing the Csabai planetary government's technology solutions, a blow to Ling Standard Products who had held the account for twelve years. On Kidderminster, Hortalez won a military contract for the Kidderminster Navy, beating out Tukera Lines, whose Subsector President is married to Duchess Margaret. On Marcolandia, LSP fought off a Hortalez bid for the Foust refinery and three gas giant mining operations, as LSP pushes for a foothold in super-metal mining from the gas giant Vilnohirsk. On the Arico market, Hortalez rose 7 to 186, LSP fell 1.5 to 141.5, and Tukera Lines fell 5.5 to 97.5."
+      "text": "source: ss6 news 1105 vol 9\n\nHortalez et Cie won a major contract managing the Csabai planetary government's technology solutions, a blow to Ling Standard Products who had held the account for twelve years. On Kidderminster, Hortalez won a military contract for the Kidderminster Navy, beating out Tukera Lines, whose Subsector President is married to Duchess Margaret. On Marcolandia, LSP fought off a Hortalez bid for the Foust refinery and three gas giant mining operations, as LSP pushes for a foothold in super-metal mining from the gas giant Vilnohirsk. On the Arico market, Hortalez rose 7 to 186, LSP fell 1.5 to 141.5, and Tukera Lines fell 5.5 to 97.5."
     },
     {
       "id": "1105-170-2",
@@ -1545,8 +2104,14 @@
       "type": "news",
       "location": "Subsector-wide",
       "system": "Subsector-wide",
+      "places": [
+        {
+          "name": "Subsector-wide",
+          "slug": null
+        }
+      ],
       "sessions": [],
-      "text": "On Arico, news of Orslo Jollynn's criminal activity bolstered the populist Psalmist community, who cite it as evidence for rejecting the love of celebrity and wealth; Psalmist groups recorded record interest and participation on Freeport and around the Belt, and Arico is seen as the informal center of Psalmist activity in the subsector. On Csabai, Psalmists kept a low profile since the arrest of Darlene Suitor, with local leaders distancing themselves from her group as \"an unfortunate militant group that has nothing to do with true Psalmism.\" On Marcolandia, at least one Psalmist center is closing due to the growing influence of Ling Standard Products, which is known to support organizations limiting Psalmist influence and bars known Psalmists from senior positions."
+      "text": "source: ss6 news 1105 vol 9\n\nOn Arico, news of Orslo Jollynn's criminal activity bolstered the populist Psalmist community, who cite it as evidence for rejecting the love of celebrity and wealth; Psalmist groups recorded record interest and participation on Freeport and around the Belt, and Arico is seen as the informal center of Psalmist activity in the subsector. On Csabai, Psalmists kept a low profile since the arrest of Darlene Suitor, with local leaders distancing themselves from her group as \"an unfortunate militant group that has nothing to do with true Psalmism.\" On Marcolandia, at least one Psalmist center is closing due to the growing influence of Ling Standard Products, which is known to support organizations limiting Psalmist influence and bars known Psalmists from senior positions."
     },
     {
       "id": "1105-185",
@@ -1564,8 +2129,18 @@
       "type": "travel",
       "location": "Eternity Station / Arico",
       "system": "Arico",
+      "places": [
+        {
+          "name": "Eternity Station",
+          "slug": "eternity-station"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
       "sessions": [],
-      "text": "Left for Metropolis Station."
+      "text": "Left for [[metropolis-station|Metropolis Station]]."
     },
     {
       "id": "1105-188",
@@ -1583,6 +2158,12 @@
       "type": "travel",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         59,
         60,
@@ -1590,7 +2171,7 @@
         62,
         63
       ],
-      "text": "Arrived at Metropolis Station. The crew met the scavenger Arkady aboard The Bell, learned of the rogue AI Monarch and the dangers of diving, and began their first incursions into the station, encountering Kevyn Barker and the stranded diver Lars."
+      "text": "Arrived at [[metropolis-station|Metropolis Station]]. The crew met the scavenger [[arkady|Arkady]] aboard [[the-bell|The Bell]], learned of the rogue AI [[monarch|Monarch]] and the dangers of diving, and began their first incursions into the station, encountering [[kevyn-barker|Kevyn Barker]] and the stranded diver [[lars|Lars]]."
     },
     {
       "id": "1105-189",
@@ -1608,6 +2189,12 @@
       "type": "party",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         64,
         65
@@ -1630,11 +2217,17 @@
       "type": "downtime",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         65,
         66
       ],
-      "text": "The crew rested aboard the Raconteur and gathered intelligence from The Bell. Magnus pleaded for help retrieving Lars, and Lord Baltimore warned that the Psalmists knew of the Ancient Orb and were pursuing them."
+      "text": "The crew rested aboard the [[raconteur|Raconteur]] and gathered intelligence from [[the-bell|The Bell]]. [[magnus|Magnus]] pleaded for help retrieving [[lars|Lars]], and [[lord-baltimore|Lord Baltimore]] warned that the Psalmists knew of the [[ancient-orb|Ancient Orb]] and were pursuing them."
     },
     {
       "id": "1105-191",
@@ -1652,11 +2245,17 @@
       "type": "party",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         66,
         67
       ],
-      "text": "Re-entering under cover of a Wu-Ketai sweep, the crew was contacted by Monarch, who offered a device to deliver to Commander Kilroy in exchange for gifts. They extracted a bag of Heavy Marbles, fought synth androids, and recovered the Monarch Advanced Device."
+      "text": "Re-entering under cover of a [[wu-ketai|Wu-Ketai]] sweep, the crew was contacted by [[monarch|Monarch]], who offered a device to deliver to [[commander-kilroy|Commander Kilroy]] in exchange for gifts. They extracted a bag of [[heavy-marbles|Heavy Marbles]], fought synth androids, and recovered the Monarch Advanced Device."
     },
     {
       "id": "1105-192",
@@ -1674,10 +2273,16 @@
       "type": "party",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         68
       ],
-      "text": "Aboard The Bell, the crew negotiated with Commander Kilroy, who demanded their artifacts until Monarch was dealt with. They agreed to destroy Monarch in exchange for gear and maps, adopted a password, and planned a week of recovery."
+      "text": "Aboard [[the-bell|The Bell]], the crew negotiated with [[commander-kilroy|Commander Kilroy]], who demanded their artifacts until [[monarch|Monarch]] was dealt with. They agreed to destroy [[monarch|Monarch]] in exchange for gear and maps, adopted a password, and planned a week of recovery."
     },
     {
       "id": "1105-199",
@@ -1695,6 +2300,12 @@
       "type": "party",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         69,
         70,
@@ -1702,7 +2313,7 @@
         72,
         73
       ],
-      "text": "The crew descended to the second floor, explored the Metropolis Human Emulation Labs, and found a replica of Isambard. They deposed the Chosen King, crossed the Foil Forest, and gained the android Kira as a guide."
+      "text": "The crew descended to the second floor, explored the Metropolis Human Emulation Labs, and found a replica of [[isambard|Isambard]]. They deposed the [[child-king|Chosen King]], crossed the Foil Forest, and gained the android [[kira|Kira]] as a guide."
     },
     {
       "id": "1105-200",
@@ -1720,11 +2331,17 @@
       "type": "party",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         74,
         75
       ],
-      "text": "The crew crossed the Final Testing bay and the goods elevator, fought security bots, and escaped to the Loading Dock where Sky awaited with the Raconteur. Commander Kilroy issued an ultimatum for their artifacts."
+      "text": "The crew crossed the Final Testing bay and the goods elevator, fought security bots, and escaped to the Loading Dock where [[sky|Sky]] awaited with the [[raconteur|Raconteur]]. [[commander-kilroy|Commander Kilroy]] issued an ultimatum for their artifacts."
     },
     {
       "id": "1105-201",
@@ -1742,11 +2359,17 @@
       "type": "downtime",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         76,
         77
       ],
-      "text": "The crew spent a week recovering and monitoring the station. The Psalmists threatened the ship, Conway Conway proved unhelpful, and Arkady reported a Red Shirt Navy fleet under the Duchess was inbound."
+      "text": "The crew spent a week recovering and monitoring the station. The [[the-134-psalms|Psalmists]] threatened the ship, [[conway|Conway]] proved unhelpful, and [[arkady|Arkady]] reported a Red Shirt Fleet  under the [[duchess-margaret|Duchess]] was inbound."
     },
     {
       "id": "1105-207",
@@ -1764,11 +2387,17 @@
       "type": "party",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
+      "places": [
+        {
+          "name": "Metropolis Station",
+          "slug": "metropolis-station"
+        }
+      ],
       "sessions": [
         78,
         79
       ],
-      "text": "The crew armed the Nuclear Warhead beneath the station, negotiated safe passage with Conway, and escaped with the Duchess's cloned body. The warhead detonated, destroying Metropolis Station and Monarch."
+      "text": "The crew armed the [[nuclear-warhead|Nuclear Warhead]] beneath the station, negotiated safe passage with [[conway|Conway]], and escaped with the [[duchess-margaret|Duchess]]'s cloned body. The warhead detonated, destroying [[metropolis-station|Metropolis Station]] and [[monarch|Monarch]]."
     }
   ]
 }

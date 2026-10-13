@@ -144,9 +144,76 @@ test("entries on the same day get distinct ids; events are sorted by date", () =
   assert.deepEqual(r.events.map((e) => e.id), ["1105-010", "1105-050", "1105-050-2"]);
 });
 
+// --- Wiki links --------------------------------------------------------------
+
+import { makeWikiIndex } from "./build-calendar.mjs";
+
+const wiki = makeWikiIndex([
+  { slug: "sarik", title: "Sarik", aliases: [] },
+  { slug: "lord-baltimore", title: "Lord Baltimore", aliases: ["Baltimore"] },
+  { slug: "cafe-dimitri", title: "Cafe Dimitri", aliases: [] },
+  { slug: "arico-el-nuevo", title: "Arico El Nuevo", aliases: ["Arico"] },
+  { slug: "suliman", title: "Suliman", aliases: [] },
+]);
+
+const linked = (body) => {
+  const r = parseTimeline(note(body), { wiki });
+  assert.deepEqual(r.errors, []);
+  return { e: r.events[0], unlinked: r.unlinked };
+};
+
+test("links resolve by file name, title, alias and full vault path", () => {
+  const { e } = linked(
+    "## 100-1105 - X\n\n[[sarik]], [[Lord Baltimore]], [[Baltimore|the Lord]], " +
+      "[[04_knowledge_wikis/bias_ccr_wiki/wiki/sarik]] and [[Cafe_Dimitri]].",
+  );
+  assert.equal(
+    e.text,
+    "[[sarik|sarik]], [[lord-baltimore|Lord Baltimore]], [[lord-baltimore|the Lord]], " +
+      "[[sarik|sarik]] and [[cafe-dimitri|Cafe Dimitri]].",
+  );
+});
+
+test("links with no wiki page become plain text and are listed", () => {
+  const { e, unlinked } = linked("## 100-1105 - X\n\nSee [[ss6_news_1105_vol_4]] and [[Red Fleet|the fleet]].");
+  assert.equal(e.text, "See ss6 news 1105 vol 4 and the fleet.");
+  assert.deepEqual(unlinked, ["Red Fleet", "ss6_news_1105_vol_4"]);
+});
+
+test("links in titles show as plain text", () => {
+  assert.equal(linked("## 100-1105 - Dinner with [[Lord Baltimore]]").e.title, "Dinner with Lord Baltimore");
+});
+
+test("where: places link automatically, with or without brackets", () => {
+  const { e } = linked("## 100-1105 - X\nwhere: Suliman / [[Arico]] / Nowhere");
+  assert.deepEqual(e.places, [
+    { name: "Suliman", slug: "suliman" },
+    { name: "Arico", slug: "arico-el-nuevo" },
+    { name: "Nowhere", slug: null },
+  ]);
+  assert.equal(e.location, "Suliman / Arico / Nowhere");
+  assert.equal(e.system, "Nowhere");
+});
+
+test("without a wiki, links are plain text", () => {
+  const e = only("## 100-1105 - X\nwhere: Suliman\n\nMet [[sarik|Sarik]].");
+  assert.equal(e.text, "Met Sarik.");
+  assert.deepEqual(e.places, [{ name: "Suliman", slug: null }]);
+});
+
 // --- Site helpers ------------------------------------------------------------
 
-import { searchPattern, marked, sessionLabel, escapeHtml } from "../site/js/views.js";
+import { searchPattern, marked, sessionLabel, escapeHtml, richText, plainText } from "../site/js/views.js";
+
+test("link markers render as escaped, highlighted wiki links", () => {
+  const html = richText("Met [[lord-baltimore|Lord <B>]] at dinner", "https://wiki/", "lord");
+  assert.equal(
+    html,
+    'Met <a class="wl" href="https://wiki/lord-baltimore" target="_blank" rel="noopener" title="Open in the BIAS CCR wiki">' +
+      "<mark>Lord</mark> &lt;B&gt;</a> at dinner",
+  );
+  assert.equal(plainText("Met [[sarik|Sarik]]."), "Met Sarik.");
+});
 
 test("search matches from the start of a word, case-insensitively", () => {
   const p = searchPattern("orb");

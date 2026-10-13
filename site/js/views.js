@@ -31,6 +31,40 @@ export function marked(text, query) {
   return re ? safe.replace(re, (m) => `<mark>${m}</mark>`) : safe;
 }
 
+// Wiki links arrive in entry text as [[slug|Display]] markers.
+const LINK_MARKER = /\[\[([^\]|]+)\|([^\]]+)\]\]/g;
+
+/** Entry text with link markers replaced by their display text (for search). */
+export function plainText(text) {
+  return text.replace(LINK_MARKER, (_, slug, display) => display);
+}
+
+/** Escaped, search-highlighted text with link markers turned into wiki links. */
+export function richText(text, wikiUrl, query) {
+  let html = "";
+  let last = 0;
+  for (const m of text.matchAll(LINK_MARKER)) {
+    html += marked(text.slice(last, m.index), query);
+    html += wikiLink(m[1], marked(m[2], query), wikiUrl);
+    last = m.index + m[0].length;
+  }
+  return html + marked(text.slice(last), query);
+}
+
+function wikiLink(slug, innerHtml, wikiUrl) {
+  if (!wikiUrl) return innerHtml;
+  const href = wikiUrl + encodeURIComponent(slug);
+  return `<a class="wl" href="${escapeHtml(href)}" target="_blank" rel="noopener" title="Open in the BIAS CCR wiki">${innerHtml}</a>`;
+}
+
+/** "Suliman / Arico" with each place linked to its wiki page when it has one. */
+function placesHtml(e, wikiUrl, query) {
+  if (!e.places?.length) return e.location ? marked(e.location, query) : "";
+  return e.places
+    .map((p) => (p.slug ? wikiLink(p.slug, marked(p.name, query), wikiUrl) : marked(p.name, query)))
+    .join(" / ");
+}
+
 const pad2 = (n) => String(n).padStart(2, "0");
 const isSpan = (e) => e.end.abs > e.start.abs;
 const covers = (e, abs) => e.start.abs <= abs && abs <= e.end.abs;
@@ -195,13 +229,13 @@ export function renderMonth(state) {
 
 // ---------- Day panel ----------
 
-function entryHtml(e, abs, currentAbs, q) {
+function entryHtml(e, abs, currentAbs, q, wikiUrl) {
   const projected = e.start.abs > currentAbs;
   const span = isSpan(e)
     ? `Day ${abs - e.start.abs + 1} of ${e.end.abs - e.start.abs + 1} · ${formatDate(e.start.day, e.start.year)} to ${formatDate(e.end.day, e.end.year)}`
     : "";
   const paragraphs = e.text
-    ? e.text.split("\n\n").map((p) => `<p>${marked(p, q)}</p>`).join("")
+    ? e.text.split("\n\n").map((p) => `<p>${richText(p, wikiUrl, q)}</p>`).join("")
     : "";
   const sessions = sessionLabel(e.sessions);
   return `
@@ -212,7 +246,7 @@ function entryHtml(e, abs, currentAbs, q) {
         ${span ? `<span class="entry__span">${span}</span>` : ""}
       </p>
       <h3>${marked(e.title, q)}</h3>
-      ${e.location ? `<p class="entry__where">${marked(e.location, q)}</p>` : ""}
+      ${e.location ? `<p class="entry__where">${placesHtml(e, wikiUrl, q)}</p>` : ""}
       ${paragraphs ? `<div class="entry__text">${paragraphs}</div>` : ""}
       ${sessions ? `<span class="chip">${sessions}</span>` : ""}
     </article>`;
@@ -231,7 +265,7 @@ export function renderDayPanel(state) {
       <p class="log__meta">${describeDay(selected.day)} · ${when}</p>
     </header>
     ${entries.length
-      ? entries.map((e) => entryHtml(e, selected.abs, currentAbs, state.query)).join("")
+      ? entries.map((e) => entryHtml(e, selected.abs, currentAbs, state.query, data.wiki)).join("")
       : `<p class="log__empty">${state.filtered ? "No entries on this day match the filters." : selected.abs > currentAbs ? "Nothing projected for this day." : "No log entries for this day."}</p>`}`;
 }
 
@@ -366,12 +400,12 @@ function periodOf(day, year) {
   };
 }
 
-function chronicleEntry(e, currentAbs, q) {
+function chronicleEntry(e, currentAbs, q, wikiUrl) {
   const projected = e.start.abs > currentAbs;
   const date = isSpan(e)
     ? `${String(e.start.day).padStart(3, "0")}<small>to ${formatDate(e.end.day, e.end.year)}</small>`
     : `${String(e.start.day).padStart(3, "0")}<small>${weekdayName(e.start.day)}</small>`;
-  const paragraphs = e.text ? e.text.split("\n\n").map((p) => `<p>${marked(p, q)}</p>`).join("") : "";
+  const paragraphs = e.text ? e.text.split("\n\n").map((p) => `<p>${richText(p, wikiUrl, q)}</p>`).join("") : "";
   const sessions = sessionLabel(e.sessions);
   return `
     <article class="rec t-${e.type}${projected ? " projected" : ""}">
@@ -380,7 +414,7 @@ function chronicleEntry(e, currentAbs, q) {
         <p class="entry__kicker">
           <span class="entry__type">${e.type}</span>
           ${projected ? `<span class="entry__proj">Projected</span>` : ""}
-          ${e.location ? `<span class="entry__span">${marked(e.location, q)}</span>` : ""}
+          ${e.location ? `<span class="entry__span">${placesHtml(e, wikiUrl, q)}</span>` : ""}
         </p>
         <h3>${marked(e.title, q)}</h3>
         ${paragraphs ? `<div class="entry__text">${paragraphs}</div>` : ""}
@@ -415,7 +449,7 @@ export function renderChronicle(state) {
       period = p.key;
       out.push(`<h3 class="period"><a href="${p.href}">${p.label}</a>${p.range ? `<span>${p.range}</span>` : ""}</h3>`);
     }
-    out.push(chronicleEntry(e, currentAbs, state.query));
+    out.push(chronicleEntry(e, currentAbs, state.query, data.wiki));
   }
   if (!todayShown) out.push(today);
   if (!events.length) {
