@@ -208,39 +208,47 @@ function parseArgs(argv) {
   return args;
 }
 
-function main() {
-  const args = parseArgs(process.argv.slice(2));
-  if (!existsSync(args.source)) {
-    console.error(`Timeline not found: ${args.source}`);
-    process.exit(1);
+/**
+ * Reads the timeline, reports problems, and (unless `check`) writes the JSON.
+ * Returns { ok, changed, current }. Messages go to the console.
+ */
+export function buildCalendar({ source = DEFAULT_SOURCE, out = DEFAULT_OUT, current, check = false } = {}) {
+  if (!existsSync(source)) {
+    console.error(`Timeline not found: ${source}`);
+    return { ok: false };
   }
 
-  const result = parseTimeline(readFileSync(args.source, "utf8"), { current: args.current });
+  const result = parseTimeline(readFileSync(source, "utf8"), { current });
   for (const w of result.warnings) console.warn(`warning: ${w}`);
   if (result.errors.length) {
     for (const e of result.errors) console.error(`error: ${e}`);
-    console.error(`Calendar NOT built: ${result.errors.length} problem(s) in ${args.source}`);
-    process.exit(1);
+    console.error(`Calendar NOT built: ${result.errors.length} problem(s) in ${source}`);
+    return { ok: false };
   }
 
-  const { current, events } = result;
+  const { events } = result;
+  const today = formatDate(result.current.day, result.current.year);
   const first = events[0];
   const last = events.at(-1);
   console.log(
-    `${events.length} events, ${first ? formatDate(first.start.day, first.start.year) : "-"} to ` +
-      `${last ? formatDate(last.end.day, last.end.year) : "-"}; today is ${formatDate(current.day, current.year)}.`,
+    `${events.length} entries, ${first ? formatDate(first.start.day, first.start.year) : "-"} to ` +
+      `${last ? formatDate(last.end.day, last.end.year) : "-"}; today is ${today}.`,
   );
-  if (args.check) return;
+  if (check) return { ok: true, changed: false, current: today };
 
-  const json = JSON.stringify({ current, events: events.map(({ line, ...e }) => e) }, null, 2) + "\n";
-  const previous = existsSync(args.out) ? readFileSync(args.out, "utf8") : null;
+  const json = JSON.stringify({ current: result.current, events: events.map(({ line, ...e }) => e) }, null, 2) + "\n";
+  const previous = existsSync(out) ? readFileSync(out, "utf8") : null;
   if (json === previous) {
     console.log("No changes.");
-    return;
+    return { ok: true, changed: false, current: today };
   }
-  mkdirSync(dirname(args.out), { recursive: true });
-  writeFileSync(args.out, json);
-  console.log(`Wrote ${args.out}`);
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(out, json);
+  console.log(`Wrote ${out}`);
+  return { ok: true, changed: true, current: today };
 }
 
-if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) main();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const { ok } = buildCalendar(parseArgs(process.argv.slice(2)));
+  if (!ok) process.exit(1);
+}
