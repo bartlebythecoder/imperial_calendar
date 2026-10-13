@@ -1013,8 +1013,192 @@
       "type": "travel",
       "location": "Metropolis Station",
       "system": "Metropolis Station",
-      "sessions": [],
-      "text": "Arrived at Metropolis Station."
+      "sessions": [
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "text": "Arrived at Metropolis Station. The crew met the scavenger Arkady aboard The Bell, learned of the rogue AI Monarch and the dangers of diving, and began their first incursions into the station, encountering Kevyn Barker and the stranded diver Lars."
+    },
+    {
+      "id": "1105-189",
+      "start": {
+        "day": 189,
+        "year": 1105,
+        "abs": 403513
+      },
+      "end": {
+        "day": 189,
+        "year": 1105,
+        "abs": 403513
+      },
+      "title": "The filtration hall and the drain room",
+      "type": "party",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        64,
+        65
+      ],
+      "text": "The crew scouted the second floor via the ventilation ducts, found the Metropolis Level Two - Filtration Hall and the Metropolis Level Two - Drain Room, and recovered a Revolver with Four Named Bullets inscribed with their own names. They estimated their haul at one to two million credits."
+    },
+    {
+      "id": "1105-190",
+      "start": {
+        "day": 190,
+        "year": 1105,
+        "abs": 403514
+      },
+      "end": {
+        "day": 190,
+        "year": 1105,
+        "abs": 403514
+      },
+      "title": "The Bell, Magnus, and Lord Baltimore",
+      "type": "downtime",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        65,
+        66
+      ],
+      "text": "The crew rested aboard the Raconteur and gathered intelligence from The Bell. Magnus pleaded for help retrieving Lars, and Lord Baltimore warned that the Psalmists knew of the Ancient Orb and were pursuing them."
+    },
+    {
+      "id": "1105-191",
+      "start": {
+        "day": 191,
+        "year": 1105,
+        "abs": 403515
+      },
+      "end": {
+        "day": 191,
+        "year": 1105,
+        "abs": 403515
+      },
+      "title": "Monarch's bargain and the Eden ghost",
+      "type": "party",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        66,
+        67
+      ],
+      "text": "Re-entering under cover of a Wu-Ketai sweep, the crew was contacted by Monarch, who offered a device to deliver to Commander Kilroy in exchange for gifts. They extracted a bag of Heavy Marbles, fought synth androids, and recovered the Monarch Advanced Device."
+    },
+    {
+      "id": "1105-192",
+      "start": {
+        "day": 192,
+        "year": 1105,
+        "abs": 403516
+      },
+      "end": {
+        "day": 192,
+        "year": 1105,
+        "abs": 403516
+      },
+      "title": "The meeting with Commander Kilroy",
+      "type": "party",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        68
+      ],
+      "text": "Aboard The Bell, the crew negotiated with Commander Kilroy, who demanded their artifacts until Monarch was dealt with. They agreed to destroy Monarch in exchange for gear and maps, adopted a password, and planned a week of recovery."
+    },
+    {
+      "id": "1105-199",
+      "start": {
+        "day": 199,
+        "year": 1105,
+        "abs": 403523
+      },
+      "end": {
+        "day": 199,
+        "year": 1105,
+        "abs": 403523
+      },
+      "title": "The fourth dive and the Child King",
+      "type": "party",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        69,
+        70,
+        71,
+        72,
+        73
+      ],
+      "text": "The crew descended to the second floor, explored the Metropolis Human Emulation Labs, and found a replica of Isambard. They deposed the Chosen King, crossed the Foil Forest, and gained the android Kira as a guide."
+    },
+    {
+      "id": "1105-200",
+      "start": {
+        "day": 200,
+        "year": 1105,
+        "abs": 403524
+      },
+      "end": {
+        "day": 200,
+        "year": 1105,
+        "abs": 403524
+      },
+      "title": "Final Testing and the goods elevator",
+      "type": "party",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        74,
+        75
+      ],
+      "text": "The crew crossed the Final Testing bay and the goods elevator, fought security bots, and escaped to the Loading Dock where Sky awaited with the Raconteur. Commander Kilroy issued an ultimatum for their artifacts."
+    },
+    {
+      "id": "1105-201",
+      "start": {
+        "day": 201,
+        "year": 1105,
+        "abs": 403525
+      },
+      "end": {
+        "day": 206,
+        "year": 1105,
+        "abs": 403530
+      },
+      "title": "Downtime aboard the Raconteur",
+      "type": "downtime",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        76,
+        77
+      ],
+      "text": "The crew spent a week recovering and monitoring the station. The Psalmists threatened the ship, Conway Conway proved unhelpful, and Arkady reported a Red Shirt Navy fleet under the Duchess was inbound."
+    },
+    {
+      "id": "1105-207",
+      "start": {
+        "day": 207,
+        "year": 1105,
+        "abs": 403531
+      },
+      "end": {
+        "day": 207,
+        "year": 1105,
+        "abs": 403531
+      },
+      "title": "The nuclear warhead",
+      "type": "party",
+      "location": "Metropolis Station",
+      "system": "Metropolis Station",
+      "sessions": [
+        78,
+        79
+      ],
+      "text": "The crew armed the Nuclear Warhead beneath the station, negotiated safe passage with Conway, and escaped with the Duchess's cloned body. The warhead detonated, destroying Metropolis Station and Monarch."
     }
   ]
 }
