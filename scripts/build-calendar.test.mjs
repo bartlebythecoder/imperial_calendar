@@ -144,6 +144,32 @@ test("entries on the same day get distinct ids; events are sorted by date", () =
   assert.deepEqual(r.events.map((e) => e.id), ["1105-010", "1105-050", "1105-050-2"]);
 });
 
+// --- Site helpers ------------------------------------------------------------
+
+import { searchPattern, marked, sessionLabel, escapeHtml } from "../site/js/views.js";
+
+test("search matches from the start of a word, case-insensitively", () => {
+  const p = searchPattern("orb");
+  assert.ok(p.test("the Orb"));
+  assert.ok(p.test("orbit"));
+  assert.ok(!p.test("Conde Borbon"));
+  assert.equal(searchPattern("  "), null);
+  assert.ok(searchPattern("(x)").test("a (x) b"));
+});
+
+test("highlighting escapes HTML and marks matches", () => {
+  assert.equal(marked("The <b>orb</b>", "orb"), "The &lt;b&gt;<mark>orb</mark>&lt;/b&gt;");
+  assert.equal(marked("Louise Soto's killer", "soto's"), "Louise <mark>Soto&#39;s</mark> killer");
+  assert.equal(marked("a & b", ""), escapeHtml("a & b"));
+});
+
+test("session labels collapse runs", () => {
+  assert.equal(sessionLabel([8]), "Session 8");
+  assert.equal(sessionLabel([54, 55, 56, 57]), "Sessions 54–57");
+  assert.equal(sessionLabel([14, 31, 32]), "Sessions 14, 31–32");
+  assert.equal(sessionLabel([]), "");
+});
+
 // --- The real note in the vault (skipped on machines without it) ----------
 
 test("the vault's ss6_timeline.md parses cleanly", { skip: !existsSync(DEFAULT_SOURCE) }, () => {

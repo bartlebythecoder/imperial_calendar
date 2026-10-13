@@ -485,6 +485,126 @@ a.btn { text-decoration: none; display: inline-block; }
   letter-spacing: 0.14em;
 }
 
+/* ---------- Filters ---------- */
+
+.top__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px 24px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding-bottom: 8px;
+}
+
+.types { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.type {
+  padding: 5px 9px 5px 8px;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--t);
+  background: var(--panel);
+  color: var(--t);
+  font: 500 11px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.type[aria-pressed="false"] {
+  border-left-color: var(--rule);
+  background: transparent;
+  color: color-mix(in srgb, var(--dim) 70%, var(--void));
+  text-decoration: line-through;
+}
+
+.type:hover { border-color: var(--dim); border-left-color: var(--t); }
+
+.field select,
+.field input {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--rule);
+  background: var(--void);
+  color: var(--amber);
+  font: 12px/1 var(--mono);
+}
+
+.field input { width: 15rem; }
+.field input::placeholder { color: var(--dim); }
+.field select:hover,
+.field input:hover { border-color: var(--dim); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.filternote {
+  margin: 14px 0 0;
+  padding: 8px 12px;
+  border: 1px dashed var(--dim);
+  color: var(--bright);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.linkbtn {
+  margin-left: 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--amber);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.linkbtn:hover { color: var(--bright); }
+
+mark {
+  background: color-mix(in srgb, var(--bright) 30%, transparent);
+  color: var(--bright);
+  box-shadow: 0 0 6px var(--glow);
+}
+
+/* ---------- Shortcut footer ---------- */
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+}
+
+kbd {
+  display: inline-block;
+  min-width: 1.7em;
+  margin-right: 4px;
+  padding: 2px 5px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--amber);
+  font: 500 11px/1.2 var(--mono);
+  text-align: center;
+}
+
 /* ---------- Year view ---------- */
 
 .tiles {
@@ -728,6 +848,8 @@ a.btn { text-decoration: none; display: inline-block; }
   .seg { font-size: 0; }
   .wkday { padding: 4px; font-size: 9px; letter-spacing: 0.05em; }
   .tab { padding: 8px 10px 7px; letter-spacing: 0.12em; }
+  .field--search, .field input { width: 100%; }
+  .keys { display: none; }
 }
 
 @media (max-width: 480px) {

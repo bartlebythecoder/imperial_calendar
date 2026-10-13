@@ -13,6 +13,24 @@ export function escapeHtml(text) {
   ));
 }
 
+/**
+ * A case-insensitive pattern matching `query` at the start of a word, so "orb"
+ * finds "orb" and "orbit" but not "Borbon". Returns null for an empty query.
+ */
+export function searchPattern(query, flags = "i") {
+  const q = (query ?? "").trim();
+  if (!q) return null;
+  const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(/^\w/.test(q) ? `\\b${escaped}` : escaped, flags);
+}
+
+/** Escapes text and wraps search matches in <mark>. */
+export function marked(text, query) {
+  const safe = escapeHtml(text);
+  const re = searchPattern(query && escapeHtml(query), "gi");
+  return re ? safe.replace(re, (m) => `<mark>${m}</mark>`) : safe;
+}
+
 const pad2 = (n) => String(n).padStart(2, "0");
 const isSpan = (e) => e.end.abs > e.start.abs;
 const covers = (e, abs) => e.start.abs <= abs && abs <= e.end.abs;
@@ -177,13 +195,13 @@ export function renderMonth(state) {
 
 // ---------- Day panel ----------
 
-function entryHtml(e, abs, currentAbs) {
+function entryHtml(e, abs, currentAbs, q) {
   const projected = e.start.abs > currentAbs;
   const span = isSpan(e)
     ? `Day ${abs - e.start.abs + 1} of ${e.end.abs - e.start.abs + 1} · ${formatDate(e.start.day, e.start.year)} to ${formatDate(e.end.day, e.end.year)}`
     : "";
   const paragraphs = e.text
-    ? e.text.split("\n\n").map((p) => `<p>${escapeHtml(p)}</p>`).join("")
+    ? e.text.split("\n\n").map((p) => `<p>${marked(p, q)}</p>`).join("")
     : "";
   const sessions = sessionLabel(e.sessions);
   return `
@@ -193,8 +211,8 @@ function entryHtml(e, abs, currentAbs) {
         ${projected ? `<span class="entry__proj">Projected</span>` : ""}
         ${span ? `<span class="entry__span">${span}</span>` : ""}
       </p>
-      <h3>${escapeHtml(e.title)}</h3>
-      ${e.location ? `<p class="entry__where">${escapeHtml(e.location)}</p>` : ""}
+      <h3>${marked(e.title, q)}</h3>
+      ${e.location ? `<p class="entry__where">${marked(e.location, q)}</p>` : ""}
       ${paragraphs ? `<div class="entry__text">${paragraphs}</div>` : ""}
       ${sessions ? `<span class="chip">${sessions}</span>` : ""}
     </article>`;
@@ -213,8 +231,8 @@ export function renderDayPanel(state) {
       <p class="log__meta">${describeDay(selected.day)} · ${when}</p>
     </header>
     ${entries.length
-      ? entries.map((e) => entryHtml(e, selected.abs, currentAbs)).join("")
-      : `<p class="log__empty">${selected.abs > currentAbs ? "Nothing projected for this day." : "No log entries for this day."}</p>`}`;
+      ? entries.map((e) => entryHtml(e, selected.abs, currentAbs, state.query)).join("")
+      : `<p class="log__empty">${state.filtered ? "No entries on this day match the filters." : selected.abs > currentAbs ? "Nothing projected for this day." : "No log entries for this day."}</p>`}`;
 }
 
 // ---------- View switcher ----------
@@ -348,12 +366,12 @@ function periodOf(day, year) {
   };
 }
 
-function chronicleEntry(e, currentAbs) {
+function chronicleEntry(e, currentAbs, q) {
   const projected = e.start.abs > currentAbs;
   const date = isSpan(e)
     ? `${String(e.start.day).padStart(3, "0")}<small>to ${formatDate(e.end.day, e.end.year)}</small>`
     : `${String(e.start.day).padStart(3, "0")}<small>${weekdayName(e.start.day)}</small>`;
-  const paragraphs = e.text ? e.text.split("\n\n").map((p) => `<p>${escapeHtml(p)}</p>`).join("") : "";
+  const paragraphs = e.text ? e.text.split("\n\n").map((p) => `<p>${marked(p, q)}</p>`).join("") : "";
   const sessions = sessionLabel(e.sessions);
   return `
     <article class="rec t-${e.type}${projected ? " projected" : ""}">
@@ -362,9 +380,9 @@ function chronicleEntry(e, currentAbs) {
         <p class="entry__kicker">
           <span class="entry__type">${e.type}</span>
           ${projected ? `<span class="entry__proj">Projected</span>` : ""}
-          ${e.location ? `<span class="entry__span">${escapeHtml(e.location)}</span>` : ""}
+          ${e.location ? `<span class="entry__span">${marked(e.location, q)}</span>` : ""}
         </p>
-        <h3>${escapeHtml(e.title)}</h3>
+        <h3>${marked(e.title, q)}</h3>
         ${paragraphs ? `<div class="entry__text">${paragraphs}</div>` : ""}
         ${sessions ? `<span class="chip">${sessions}</span>` : ""}
       </div>
@@ -397,9 +415,12 @@ export function renderChronicle(state) {
       period = p.key;
       out.push(`<h3 class="period"><a href="${p.href}">${p.label}</a>${p.range ? `<span>${p.range}</span>` : ""}</h3>`);
     }
-    out.push(chronicleEntry(e, currentAbs));
+    out.push(chronicleEntry(e, currentAbs, state.query));
   }
   if (!todayShown) out.push(today);
+  if (!events.length) {
+    out.push(`<p class="log__empty">No entries match the filters. <button class="linkbtn" data-clear>Clear filters</button></p>`);
+  }
 
   return `
     <div class="bar">

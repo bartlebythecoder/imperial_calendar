@@ -9,11 +9,81 @@
 
 import { toAbs, fromAbs, monthOf, monthRange, MONTHS_PER_YEAR, isValidDay } from "./calendar-math.js";
 import {
-  renderClock, renderViewNav, renderMonth, renderDayPanel, renderYear, renderChronicle,
+  renderClock, renderViewNav, renderMonth, renderDayPanel, renderYear, renderChronicle, searchPattern,
 } from "./views.js";
 
 const $ = (id) => document.getElementById(id);
-const state = { data: null, view: "month", year: 0, month: 1, selected: null, order: "newest" };
+const TYPES = ["party", "news", "travel", "downtime", "deadline", "finance"];
+const state = {
+  data: null, view: "month", year: 0, month: 1, selected: null, order: "newest",
+  filters: { types: new Set(TYPES), system: "", query: "" },
+};
+
+// ---------- Filters ----------
+
+function filtersActive() {
+  const { types, system, query } = state.filters;
+  return types.size < TYPES.length || system !== "" || query.trim() !== "";
+}
+
+function matches(e) {
+  const { types, system, query } = state.filters;
+  if (!types.has(e.type)) return false;
+  if (system && e.system !== system) return false;
+  const pattern = searchPattern(query);
+  if (pattern && !pattern.test(`${e.title}\n${e.text}\n${e.location ?? ""}`)) return false;
+  return true;
+}
+
+function clearFilters() {
+  state.filters = { types: new Set(TYPES), system: "", query: "" };
+  $("system").value = "";
+  $("search").value = "";
+  render();
+}
+
+function syncFilterControls() {
+  for (const btn of $("filters").querySelectorAll("[data-type]")) {
+    btn.setAttribute("aria-pressed", String(state.filters.types.has(btn.dataset.type)));
+  }
+  const note = $("filternote");
+  note.hidden = !filtersActive();
+  if (!note.hidden) {
+    const shown = state.data.events.filter(matches).length;
+    note.innerHTML = `Showing ${shown} of ${state.data.events.length} entries <button class="linkbtn" data-clear>Clear filters</button>`;
+  }
+}
+
+function setupFilters() {
+  const systems = [...new Set(state.data.events.map((e) => e.system).filter(Boolean))]
+    .filter((s) => !/^in transit$/i.test(s))
+    .sort((a, b) => a.localeCompare(b));
+  for (const s of systems) $("system").add(new Option(s, s));
+  $("filters").hidden = false;
+
+  $("filters").addEventListener("submit", (ev) => ev.preventDefault());
+  $("filters").addEventListener("click", (ev) => {
+    const btn = ev.target.closest("[data-type]");
+    if (!btn) return;
+    const { types } = state.filters;
+    if (types.has(btn.dataset.type)) types.delete(btn.dataset.type);
+    else types.add(btn.dataset.type);
+    render();
+  });
+  $("system").addEventListener("change", () => { state.filters.system = $("system").value; render(); });
+  $("search").addEventListener("input", () => { state.filters.query = $("search").value; render(); });
+  $("search").addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape") {
+      $("search").value = "";
+      state.filters.query = "";
+      $("search").blur();
+      render();
+    }
+  });
+  document.addEventListener("click", (ev) => {
+    if (ev.target.closest("[data-clear]")) clearFilters();
+  });
+}
 
 const monthForDay = (day) => monthOf(day) ?? 1; // Holiday sits with Month 1
 
@@ -59,16 +129,26 @@ function render() {
   $("views").innerHTML = renderViewNav(state);
   $("deck").classList.toggle("deck--wide", view !== "month");
   $("log").hidden = view !== "month";
+  syncFilterControls();
+
+  // Views see only the entries that pass the filters.
+  const filtered = filtersActive();
+  const shown = {
+    ...state,
+    data: filtered ? { ...state.data, events: state.data.events.filter(matches) } : state.data,
+    filtered,
+    query: state.filters.query.trim(),
+  };
 
   if (view === "year") {
-    $("main").innerHTML = renderYear(state);
+    $("main").innerHTML = renderYear(shown);
     document.title = `Year ${state.year} · Imperial Calendar`;
   } else if (view === "chronicle") {
-    $("main").innerHTML = renderChronicle(state);
+    $("main").innerHTML = renderChronicle(shown);
     document.title = "Chronicle · Imperial Calendar";
   } else {
-    $("main").innerHTML = renderMonth(state);
-    $("log").innerHTML = renderDayPanel(state);
+    $("main").innerHTML = renderMonth(shown);
+    $("log").innerHTML = renderDayPanel(shown);
     document.title = `Month ${state.month} · ${state.year} · Imperial Calendar`;
   }
 }
@@ -127,6 +207,11 @@ function wireEvents() {
 
   document.addEventListener("keydown", (ev) => {
     if (ev.altKey || ev.ctrlKey || ev.metaKey || ev.target.closest("input, textarea, select")) return;
+    if (ev.key === "/") {
+      ev.preventDefault();
+      $("search").focus();
+      return;
+    }
     const key = ev.key.toLowerCase();
     if (ev.key === "ArrowLeft" && state.view !== "chronicle") step(-1);
     else if (ev.key === "ArrowRight" && state.view !== "chronicle") step(1);
@@ -154,6 +239,7 @@ async function start() {
     return;
   }
   $("clock").innerHTML = renderClock(state.data);
+  setupFilters();
   wireEvents();
   applyRoute();
 }

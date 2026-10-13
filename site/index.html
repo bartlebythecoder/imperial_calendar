@@ -15,12 +15,40 @@
     <div class="clock" id="clock">
       <p class="status">Reading ship's log…</p>
     </div>
-    <nav class="tabs" id="views" aria-label="Views"></nav>
+    <div class="top__row">
+      <nav class="tabs" id="views" aria-label="Views"></nav>
+      <form class="filters" id="filters" role="search" hidden>
+        <div class="types" role="group" aria-label="Entry types">
+          <button type="button" class="type t-party" data-type="party" aria-pressed="true">Party</button>
+          <button type="button" class="type t-news" data-type="news" aria-pressed="true">News</button>
+          <button type="button" class="type t-travel" data-type="travel" aria-pressed="true">Travel</button>
+          <button type="button" class="type t-downtime" data-type="downtime" aria-pressed="true">Downtime</button>
+          <button type="button" class="type t-deadline" data-type="deadline" aria-pressed="true">Deadline</button>
+          <button type="button" class="type t-finance" data-type="finance" aria-pressed="true">Finance</button>
+        </div>
+        <label class="field">
+          <span class="sr-only">System</span>
+          <select id="system"><option value="">All systems</option></select>
+        </label>
+        <label class="field field--search">
+          <span class="sr-only">Search the log</span>
+          <input id="search" type="search" placeholder="Search the log  /" autocomplete="off" spellcheck="false">
+        </label>
+      </form>
+    </div>
   </header>
+  <p class="filternote" id="filternote" hidden></p>
   <div class="deck" id="deck">
     <main id="main"></main>
     <aside class="log" id="log" aria-live="polite"></aside>
   </div>
+  <footer class="keys" aria-label="Keyboard shortcuts">
+    <span><kbd>←</kbd><kbd>→</kbd> previous / next</span>
+    <span><kbd>T</kbd> today</span>
+    <span><kbd>Y</kbd><kbd>M</kbd><kbd>C</kbd> year · month · chronicle</span>
+    <span><kbd>/</kbd> search</span>
+    <span><kbd>Esc</kbd> clear search</span>
+  </footer>
   <script type="module" src="js/app.js"></script>
 </body>
 </html>
