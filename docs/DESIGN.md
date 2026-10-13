@@ -143,7 +143,8 @@ imperial_calendar/
   docs/DESIGN.md
   scripts/build-calendar.mjs     # timeline.md → calendar.json
   scripts/build-calendar.test.mjs
-  scripts/publish-calendar.bat   # build, commit and push if changed
+  scripts/publish-calendar.mjs   # build, commit and push if changed
+  scripts/publish-calendar.bat   # wrapper called from run_sync.bat
   site/
     index.html
     css/calendar.css
