@@ -4,38 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>Imperial Calendar</title>
-  <style>
-    :root { --bg: #0b0a08; --fg: #ffb000; --dim: #8a6a1f; }
-    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); }
-    body {
-      font: 16px/1.6 ui-monospace, "Cascadia Mono", Consolas, monospace;
-      display: grid; place-items: center; padding: 0 16px;
-    }
-    .panel { border: 1px solid var(--dim); padding: 2rem 2.5rem; max-width: 36rem; }
-    h1 { font-size: 1rem; letter-spacing: .3em; margin: 0 0 1rem; }
-    .today { font-size: 2rem; text-shadow: 0 0 8px rgba(255, 176, 0, .5); }
-    .dim { color: var(--dim); }
-  </style>
+  <title>Imperial Calendar · Sector Solo Six</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/calendar.css">
 </head>
 <body>
-  <main class="panel">
-    <h1>IMPERIAL CALENDAR // SECTOR SOLO SIX</h1>
-    <div class="today" id="today">----</div>
-    <p class="dim" id="status">Loading ship's log…</p>
-    <p class="dim">Calendar views under construction.</p>
-  </main>
-  <script type="module">
-    import { formatDate, weekdayName, weekOf, monthOf } from "./js/calendar-math.js";
-    try {
-      const data = await (await fetch("data/calendar.json")).json();
-      const { day, year } = data.current;
-      document.getElementById("today").textContent = formatDate(day, year);
-      document.getElementById("status").textContent =
-        `${weekdayName(day)} · Week ${weekOf(day)} · Month ${monthOf(day)} · ${data.events.length} log entries`;
-    } catch {
-      document.getElementById("status").textContent = "Ship's log unavailable.";
-    }
-  </script>
+  <header class="clock" id="clock">
+    <p class="status">Reading ship's log…</p>
+  </header>
+  <div class="deck">
+    <main id="month"></main>
+    <aside class="log" id="log" aria-live="polite"></aside>
+  </div>
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>

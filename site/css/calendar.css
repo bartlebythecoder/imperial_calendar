@@ -1,0 +1,470 @@
+/* Imperial Calendar: the Raconteur's log terminal. */
+
+:root {
+  /* Phosphor palette */
+  --void: #0c0a06;
+  --panel: #14100a;
+  --raised: #1d170d;
+  --rule: #3a2d15;
+  --dim: #8a6a30;
+  --amber: #f2a93b;
+  --bright: #ffd58a;
+  --glow: rgba(255, 176, 0, 0.38);
+
+  /* Entry types */
+  --t-party: #f2a93b;
+  --t-news: #6cc6d2;
+  --t-travel: #8fd36c;
+  --t-downtime: #b5a0dc;
+  --t-deadline: #ff6b4d;
+  --t-finance: #e9e1c6;
+
+  --display: "Chakra Petch", "Bahnschrift", "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--void); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 0 24px 32px;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 170, 40, 0.07), transparent 60%),
+    var(--void);
+  color: var(--amber);
+  font: 14px/1.55 var(--mono);
+}
+
+/* Faint scanlines over everything */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom, transparent 0 2px, rgba(0, 0, 0, 0.18) 2px 3px
+  );
+  z-index: 10;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 1px solid var(--bright);
+  outline-offset: 2px;
+  box-shadow: 0 0 10px var(--glow);
+}
+
+.t-party { --t: var(--t-party); }
+.t-news { --t: var(--t-news); }
+.t-travel { --t: var(--t-travel); }
+.t-downtime { --t: var(--t-downtime); }
+.t-deadline { --t: var(--t-deadline); }
+.t-finance { --t: var(--t-finance); }
+
+/* ---------- Header: the ship's clock ---------- */
+
+.clock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding: 22px 0 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.clock__id {
+  margin: 0 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--dim);
+}
+
+.clock__now {
+  margin: 0;
+  font: 600 34px/1 var(--display);
+  letter-spacing: 0.04em;
+  color: var(--bright);
+  text-shadow: 0 0 12px var(--glow);
+}
+
+.clock__now .prompt { color: var(--dim); margin-right: 0.35em; }
+
+.clock__now .cursor {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.9em;
+  margin-left: 0.25em;
+  vertical-align: -0.05em;
+  background: var(--bright);
+  box-shadow: 0 0 10px var(--glow);
+  animation: blink 1.1s steps(1) infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.clock__meta {
+  margin: 8px 0 0;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.clock__next {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 13px;
+  color: var(--dim);
+  text-align: right;
+}
+
+.clock__next b { color: var(--amber); font-weight: 500; }
+
+/* ---------- Layout ---------- */
+
+.deck {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* ---------- Month toolbar ---------- */
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-bottom: 12px;
+}
+
+.bar h2 {
+  margin: 0;
+  font: 600 22px/1 var(--display);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bright);
+}
+
+.bar__range {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+
+.bar__nav { display: flex; gap: 6px; margin-left: auto; }
+
+.btn {
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--amber);
+  font: 500 12px/1 var(--mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover { border-color: var(--dim); color: var(--bright); }
+
+/* ---------- Holiday strip (Month 1 only) ---------- */
+
+.holiday {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+  color: var(--amber);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.holiday .num { font: 600 20px/1 var(--display); color: var(--bright); }
+.holiday .label { letter-spacing: 0.24em; font-size: 12px; }
+.holiday .evts { color: var(--dim); font-size: 12px; }
+
+/* ---------- Month grid ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  border-left: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
+  overflow: clip; /* keep strip labels inside the grid */
+}
+
+.wkday {
+  padding: 6px 8px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+
+.cell {
+  position: relative;
+  min-height: 124px;
+  padding: 6px 0 8px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--panel);
+  cursor: pointer;
+}
+
+.cell:hover { background: var(--raised); }
+
+.cell__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 8px 4px;
+}
+
+.cell .num {
+  font: 600 20px/1 var(--display);
+  letter-spacing: 0.04em;
+}
+
+.cell .tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--dim);
+}
+
+/* Days still to come: hatched like unlogged tape */
+.cell.future {
+  background:
+    repeating-linear-gradient(135deg, transparent 0 7px, rgba(242, 169, 59, 0.05) 7px 8px),
+    var(--void);
+}
+.cell.future .num { color: var(--dim); }
+
+.cell.today {
+  z-index: 1;
+  background: var(--raised);
+  box-shadow: inset 0 0 0 1px var(--bright), 0 0 18px var(--glow);
+}
+.cell.today .num { color: var(--bright); text-shadow: 0 0 10px var(--glow); }
+.cell.today .tag { color: var(--bright); }
+
+.cell.selected:not(.today) { box-shadow: inset 0 0 0 1px var(--dim); background: var(--raised); }
+
+/* Spans: continuous strips across the days they cover */
+.lane {
+  height: 18px;
+  margin-bottom: 3px;
+}
+
+.seg {
+  height: 100%;
+  padding: 0 8px;
+  background: color-mix(in srgb, var(--t) 18%, transparent);
+  border-top: 1px solid color-mix(in srgb, var(--t) 55%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--t) 55%, transparent);
+  color: var(--t);
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.seg__label {
+  position: relative;
+  z-index: 2;
+  display: block;
+  /* Span the strip's days in this week row: n cells plus the 1px borders between them */
+  width: calc(var(--n) * 100% + (var(--n) - 1) * 1px + 6px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.seg.first { margin-left: 6px; border-left: 2px solid var(--t); }
+.seg.last { margin-right: 6px; border-right: 1px solid color-mix(in srgb, var(--t) 55%, transparent); }
+.seg.projected { border-style: dashed; background: transparent; }
+
+.evts {
+  margin: 0;
+  padding: 0 6px;
+  list-style: none;
+}
+
+.evts li {
+  margin-top: 3px;
+  padding-left: 6px;
+  border-left: 2px solid var(--t);
+  color: var(--t);
+  font-size: 12px;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.evts li.projected { border-left-style: dashed; opacity: 0.85; }
+.evts li.more { border: 0; color: var(--dim); }
+
+/* ---------- Day panel ---------- */
+
+.log {
+  align-self: start;
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  border: 1px solid var(--rule);
+  background: var(--panel);
+}
+
+.log__head {
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.log__date {
+  margin: 0;
+  font: 600 28px/1 var(--display);
+  color: var(--bright);
+  letter-spacing: 0.04em;
+}
+
+.log__meta {
+  margin: 6px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.log__empty {
+  margin: 0;
+  padding: 18px;
+  color: var(--dim);
+}
+
+.entry {
+  padding: 16px 18px 18px;
+  border-bottom: 1px solid var(--rule);
+  border-left: 3px solid var(--t);
+}
+
+.entry:last-child { border-bottom: 0; }
+
+.entry.projected {
+  border-left-style: dashed;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 7px, rgba(242, 169, 59, 0.04) 7px 8px);
+}
+
+.entry__kicker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 0 0 6px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.entry__type { color: var(--t); }
+.entry__proj { color: var(--bright); }
+.entry__span { color: var(--dim); }
+
+.entry h3 {
+  margin: 0;
+  font: 600 17px/1.25 var(--display);
+  letter-spacing: 0.02em;
+  color: var(--bright);
+}
+
+.entry__where {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--dim);
+}
+
+.entry__text { margin-top: 10px; }
+.entry__text p { margin: 0 0 8px; color: var(--amber); }
+
+.chip {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border: 1px solid var(--rule);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+
+/* ---------- Legend ---------- */
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.legend li::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 7px;
+  vertical-align: -1px;
+  background: var(--t);
+}
+
+.legend li.l-projected::before {
+  background: repeating-linear-gradient(135deg, transparent 0 2px, var(--dim) 2px 3px);
+  outline: 1px dashed var(--dim);
+}
+
+.status {
+  padding: 48px 0;
+  color: var(--dim);
+  letter-spacing: 0.14em;
+}
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 1100px) {
+  .deck { grid-template-columns: minmax(0, 1fr); }
+  .log { position: static; max-height: none; }
+}
+
+@media (max-width: 640px) {
+  body { padding: 0 16px 24px; }
+  .clock__now { font-size: 26px; }
+  .clock__next { text-align: left; }
+  .cell { min-height: 64px; }
+  .cell .num { font-size: 15px; }
+  .cell .tag, .evts li:not(.more) { font-size: 0; height: 6px; border-left-width: 6px; margin-top: 3px; }
+  .seg { font-size: 0; }
+  .wkday { padding: 4px; font-size: 9px; letter-spacing: 0.05em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clock__now .cursor { animation: none; }
+}
