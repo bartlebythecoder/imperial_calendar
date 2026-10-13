@@ -1,0 +1,972 @@
+{
+  "current": {
+    "day": 212,
+    "year": 1105,
+    "abs": 403536
+  },
+  "events": [
+    {
+      "id": "1104-304",
+      "start": {
+        "day": 304,
+        "year": 1104,
+        "abs": 403263
+      },
+      "end": {
+        "day": 304,
+        "year": 1104,
+        "abs": 403263
+      },
+      "location": "Vale do Paraiso",
+      "title": "SuSAG announced development of DeLeon anagathic drug",
+      "text": "SuSAG announced development of DeLeon anagathic drug.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1104-353",
+      "start": {
+        "day": 353,
+        "year": 1104,
+        "abs": 403312
+      },
+      "end": {
+        "day": 353,
+        "year": 1104,
+        "abs": 403312
+      },
+      "location": "Pleasant Hill",
+      "title": "System ceded authority to Children of the Psalms with Duke Dulinor's support",
+      "text": "System ceded authority to Children of the Psalms with Duke Dulinor's support.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-001",
+      "start": {
+        "day": 1,
+        "year": 1105,
+        "abs": 403325
+      },
+      "end": {
+        "day": 1,
+        "year": 1105,
+        "abs": 403325
+      },
+      "location": "Arico El Nuevo",
+      "title": "Wu-Ketai announced successful breeding of uplifted simians",
+      "text": "Wu-Ketai announced successful breeding of uplifted simians.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-018",
+      "start": {
+        "day": 18,
+        "year": 1105,
+        "abs": 403342
+      },
+      "end": {
+        "day": 18,
+        "year": 1105,
+        "abs": 403342
+      },
+      "location": "LaChat",
+      "title": "Erebus: Sir Byron Falcon Power announced Alexandria computer archive",
+      "text": "Erebus: Sir Byron Falcon Power announced Alexandria computer archive.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-022",
+      "start": {
+        "day": 22,
+        "year": 1105,
+        "abs": 403346
+      },
+      "end": {
+        "day": 22,
+        "year": 1105,
+        "abs": 403346
+      },
+      "location": "Romentino",
+      "title": "BIAS CCR departed for Mirassol via 30-hour shuttle",
+      "text": "BIAS CCR departed for Mirassol via 30-hour shuttle.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-023",
+      "start": {
+        "day": 23,
+        "year": 1105,
+        "abs": 403347
+      },
+      "end": {
+        "day": 36,
+        "year": 1105,
+        "abs": 403360
+      },
+      "location": "Mirassol",
+      "title": "BIAS CCR spent 18 local days investigating archaeological site and recovering the…",
+      "text": "BIAS CCR spent 18 local days investigating archaeological site and recovering the mysterious orb.",
+      "category": "party",
+      "sessions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "1105-025",
+      "start": {
+        "day": 25,
+        "year": 1105,
+        "abs": 403349
+      },
+      "end": {
+        "day": 25,
+        "year": 1105,
+        "abs": 403349
+      },
+      "location": "Nesvorny",
+      "title": "The Nesvorny government announced MCr 45.0 Pharr care package from Rimward Circuit…",
+      "text": "The Nesvorny government announced MCr 45.0 Pharr care package from Rimward Circuit Collective.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-030",
+      "start": {
+        "day": 30,
+        "year": 1105,
+        "abs": 403354
+      },
+      "end": {
+        "day": 30,
+        "year": 1105,
+        "abs": 403354
+      },
+      "location": "Kidderminster",
+      "title": "Peace talks with Sanlucar de Barram stalled over war crimes dispute",
+      "text": "Peace talks with Sanlucar de Barram stalled over war crimes dispute.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-033",
+      "start": {
+        "day": 33,
+        "year": 1105,
+        "abs": 403357
+      },
+      "end": {
+        "day": 33,
+        "year": 1105,
+        "abs": 403357
+      },
+      "location": "Romentino",
+      "title": "Imperial officials expanded ship permissions to major Line Companies",
+      "text": "Imperial officials expanded ship permissions to major Line Companies.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-035",
+      "start": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "end": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "location": null,
+      "title": "Escape from Mirassol",
+      "text": "Escape from Mirassol",
+      "category": "party",
+      "sessions": [
+        8
+      ]
+    },
+    {
+      "id": "1105-036",
+      "start": {
+        "day": 36,
+        "year": 1105,
+        "abs": 403360
+      },
+      "end": {
+        "day": 38,
+        "year": 1105,
+        "abs": 403362
+      },
+      "location": "In Transit",
+      "title": "BIAS CCR made a rushed escape from Mirassol with Liam Rossi's body",
+      "text": "BIAS CCR made a rushed escape from Mirassol with Liam Rossi's body.",
+      "category": "party",
+      "sessions": [
+        9
+      ]
+    },
+    {
+      "id": "1105-038",
+      "start": {
+        "day": 38,
+        "year": 1105,
+        "abs": 403362
+      },
+      "end": {
+        "day": 38,
+        "year": 1105,
+        "abs": 403362
+      },
+      "location": "Romentino",
+      "title": "BIAS CCR tracked down Harry Proud and Screetch, recovered the orb after confrontation",
+      "text": "BIAS CCR tracked down Harry Proud and Screetch, recovered the orb after confrontation.",
+      "category": "party",
+      "sessions": [
+        10
+      ]
+    },
+    {
+      "id": "1105-039",
+      "start": {
+        "day": 39,
+        "year": 1105,
+        "abs": 403363
+      },
+      "end": {
+        "day": 39,
+        "year": 1105,
+        "abs": 403363
+      },
+      "location": null,
+      "title": "Meet Lord Baltimore",
+      "text": "Meet Lord Baltimore",
+      "category": "party",
+      "sessions": [
+        11
+      ]
+    },
+    {
+      "id": "1105-040",
+      "start": {
+        "day": 40,
+        "year": 1105,
+        "abs": 403364
+      },
+      "end": {
+        "day": 40,
+        "year": 1105,
+        "abs": 403364
+      },
+      "location": "Romentino",
+      "title": "BIAS CCR attended Lord Baltimore's formal dinner party",
+      "text": "BIAS CCR attended Lord Baltimore's formal dinner party.",
+      "category": "party",
+      "sessions": [
+        12
+      ]
+    },
+    {
+      "id": "1105-043",
+      "start": {
+        "day": 43,
+        "year": 1105,
+        "abs": 403367
+      },
+      "end": {
+        "day": 43,
+        "year": 1105,
+        "abs": 403367
+      },
+      "location": "Romentino",
+      "title": "Isambard won at poker while group investigated files and starlight connections",
+      "text": "Isambard won at poker while group investigated files and starlight connections.",
+      "category": "party",
+      "sessions": [
+        13
+      ]
+    },
+    {
+      "id": "1105-044",
+      "start": {
+        "day": 44,
+        "year": 1105,
+        "abs": 403368
+      },
+      "end": {
+        "day": 44,
+        "year": 1105,
+        "abs": 403368
+      },
+      "location": "Romentino",
+      "title": "BIAS CCR rescued kidnapped Paolo and received Joey's protection offer",
+      "text": "BIAS CCR rescued kidnapped Paolo and received Joey's protection offer. Rescued Tina and killed Bobby, reported Joey to Koroleva.",
+      "category": "party",
+      "sessions": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "id": "1105-047",
+      "start": {
+        "day": 47,
+        "year": 1105,
+        "abs": 403371
+      },
+      "end": {
+        "day": 47,
+        "year": 1105,
+        "abs": 403371
+      },
+      "location": "Romentino",
+      "title": "BIAS CCR infiltrated the Morella Mining settlement",
+      "text": "BIAS CCR infiltrated the Morella Mining settlement. Sarik goes insane and attacks Dr. Smart. The group fights their way out and brings Dr. Smart for questioning. They escape Romentino with Sky and Tina and are off to Csabai",
+      "category": "party",
+      "sessions": [
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "id": "1105-054",
+      "start": {
+        "day": 54,
+        "year": 1105,
+        "abs": 403378
+      },
+      "end": {
+        "day": 54,
+        "year": 1105,
+        "abs": 403378
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group leaves jumpsace and arrives in the Csabai system",
+      "text": "The BIAS CCR group leaves jumpsace and arrives in the Csabai system",
+      "category": "party",
+      "sessions": [
+        20
+      ]
+    },
+    {
+      "id": "1105-056",
+      "start": {
+        "day": 56,
+        "year": 1105,
+        "abs": 403380
+      },
+      "end": {
+        "day": 56,
+        "year": 1105,
+        "abs": 403380
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group arrives at Starport Alpha - A starport orbiting the planet Csabai",
+      "text": "The BIAS CCR group arrives at Starport Alpha - A starport orbiting the planet Csabai",
+      "category": "party",
+      "sessions": [
+        21
+      ]
+    },
+    {
+      "id": "1105-057",
+      "start": {
+        "day": 57,
+        "year": 1105,
+        "abs": 403381
+      },
+      "end": {
+        "day": 57,
+        "year": 1105,
+        "abs": 403381
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group begins work to investigate the stolen Beaugart painting",
+      "text": "The BIAS CCR group begins work to investigate the stolen Beaugart painting",
+      "category": "party",
+      "sessions": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": "1105-058",
+      "start": {
+        "day": 58,
+        "year": 1105,
+        "abs": 403382
+      },
+      "end": {
+        "day": 58,
+        "year": 1105,
+        "abs": 403382
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group find the Beaugart and accepts an invitation to the Viscount's ball",
+      "text": "The BIAS CCR group find the Beaugart and accepts an invitation to the Viscount's ball",
+      "category": "party",
+      "sessions": [
+        22,
+        23
+      ]
+    },
+    {
+      "id": "1105-061",
+      "start": {
+        "day": 61,
+        "year": 1105,
+        "abs": 403385
+      },
+      "end": {
+        "day": 61,
+        "year": 1105,
+        "abs": 403385
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group enters a private clinic for augmentation surgery",
+      "text": "The BIAS CCR group enters a private clinic for augmentation surgery.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-089",
+      "start": {
+        "day": 89,
+        "year": 1105,
+        "abs": 403413
+      },
+      "end": {
+        "day": 89,
+        "year": 1105,
+        "abs": 403413
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group is released from the private clinic after completing recovery and…",
+      "text": "The BIAS CCR group is released from the private clinic after completing recovery and phsyio for their augmentation surgery. While waiting for a potential client, named Calmer Singh, they find themselves embroiled in a mystery. Singh is killed, and his ship has a holo-video about a conspiracy to kill someone named Darnes, and to steal the Orb from BIAS CCR. The BIAS CCR team manages to kill the Irklan assassin after them",
+      "category": "party",
+      "sessions": [
+        24
+      ]
+    },
+    {
+      "id": "1105-090",
+      "start": {
+        "day": 90,
+        "year": 1105,
+        "abs": 403414
+      },
+      "end": {
+        "day": 90,
+        "year": 1105,
+        "abs": 403414
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR group investigates the mystery of Calmer Singh, the dead Irklan, and who…",
+      "text": "The BIAS CCR group investigates the mystery of Calmer Singh, the dead Irklan, and who knows about their orb. Calmer's crew is found dead in his ship, and the engineer is missing",
+      "category": "party",
+      "sessions": [
+        25
+      ]
+    },
+    {
+      "id": "1105-091",
+      "start": {
+        "day": 91,
+        "year": 1105,
+        "abs": 403415
+      },
+      "end": {
+        "day": 91,
+        "year": 1105,
+        "abs": 403415
+      },
+      "location": "Csabai",
+      "title": "Asher avoids an attack at the Palace by Housekeeper Tuttle",
+      "text": "Asher avoids an attack at the Palace by Housekeeper Tuttle. Beck arranges an appointment with Darnes the following day at LSP",
+      "category": "party",
+      "sessions": [
+        26
+      ]
+    },
+    {
+      "id": "1105-092",
+      "start": {
+        "day": 92,
+        "year": 1105,
+        "abs": 403416
+      },
+      "end": {
+        "day": 92,
+        "year": 1105,
+        "abs": 403416
+      },
+      "location": "Csabai",
+      "title": "Beck enters LSP HQ on Csabai - will she ever leave?",
+      "text": "Beck enters LSP HQ on Csabai - will she ever leave? Sarik and Isambard (with Tina's help) purchase information from an Irklan named Reshka. They have a photo of who hired the Irklan assassin, and information that he is likely in the Psalmist Center on the city of Basin",
+      "category": "party",
+      "sessions": [
+        27
+      ]
+    },
+    {
+      "id": "1105-093",
+      "start": {
+        "day": 93,
+        "year": 1105,
+        "abs": 403417
+      },
+      "end": {
+        "day": 93,
+        "year": 1105,
+        "abs": 403417
+      },
+      "location": "Csabai",
+      "title": "Isambard and Sarik go to Basin City on Csabai and enter the Psalmist Center where Sarik…",
+      "text": "Isambard and Sarik go to Basin City on Csabai and enter the Psalmist Center where Sarik ends up shooting the man they were looking for (named Guillaume)",
+      "category": "party",
+      "sessions": [
+        28
+      ]
+    },
+    {
+      "id": "1105-094",
+      "start": {
+        "day": 94,
+        "year": 1105,
+        "abs": 403418
+      },
+      "end": {
+        "day": 94,
+        "year": 1105,
+        "abs": 403418
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR team hunts down Jacob, who has a data wafer with incriminating evidence",
+      "text": "The BIAS CCR team hunts down Jacob, who has a data wafer with incriminating evidence. They find him and the wafer, remove the orb references, and turn him over to authorities. The team leaves the planet on their new Scout ship, the Raconteur.",
+      "category": "party",
+      "sessions": [
+        29,
+        30
+      ]
+    },
+    {
+      "id": "1105-099",
+      "start": {
+        "day": 99,
+        "year": 1105,
+        "abs": 403423
+      },
+      "end": {
+        "day": 99,
+        "year": 1105,
+        "abs": 403423
+      },
+      "location": "Csabai",
+      "title": "The BIAS CCR team arrives at the jump point in the system and jumps for Marcolandia",
+      "text": "The BIAS CCR team arrives at the jump point in the system and jumps for Marcolandia.",
+      "category": "party",
+      "sessions": [
+        30
+      ]
+    },
+    {
+      "id": "1105-103",
+      "start": {
+        "day": 103,
+        "year": 1105,
+        "abs": 403427
+      },
+      "end": {
+        "day": 103,
+        "year": 1105,
+        "abs": 403427
+      },
+      "location": "Marcolandia",
+      "title": "The BIAS CCR team arrives from jumpspace into the Marcolandia System",
+      "text": "The BIAS CCR team arrives from jumpspace into the Marcolandia System. They accept a job from Foust Refinery to manage security for one week.",
+      "category": "party",
+      "sessions": [
+        30
+      ]
+    },
+    {
+      "id": "1105-104",
+      "start": {
+        "day": 104,
+        "year": 1105,
+        "abs": 403428
+      },
+      "end": {
+        "day": 104,
+        "year": 1105,
+        "abs": 403428
+      },
+      "location": "Marcolandia",
+      "title": "Day One on Foust Refinery",
+      "text": "Day One on Foust Refinery. The group sets up cameras and interviews key employees.",
+      "category": "party",
+      "sessions": [
+        31,
+        32
+      ]
+    },
+    {
+      "id": "1105-105",
+      "start": {
+        "day": 105,
+        "year": 1105,
+        "abs": 403429
+      },
+      "end": {
+        "day": 105,
+        "year": 1105,
+        "abs": 403429
+      },
+      "location": "Marcolandia",
+      "title": "Day Two on Foust Refinery",
+      "text": "Day Two on Foust Refinery. In the evening Foust returns from the capital and becomes ill and a security team releases a number of prisoners. BIAS CCR shuts down the rebellion and is paid their bonus by their patron, Foust.",
+      "category": "party",
+      "sessions": [
+        31,
+        32
+      ]
+    },
+    {
+      "id": "1105-106",
+      "start": {
+        "day": 106,
+        "year": 1105,
+        "abs": 403430
+      },
+      "end": {
+        "day": 106,
+        "year": 1105,
+        "abs": 403430
+      },
+      "location": "Marcolandia",
+      "title": "The BIAS CCR team leaves the Starport and has a strange encounter with a mysterious ship",
+      "text": "The BIAS CCR team leaves the Starport and has a strange encounter with a mysterious ship. Isambard and Sarik get mysterious psionic messages. The team jumps to Arico El Nuevo.",
+      "category": "party",
+      "sessions": [
+        33
+      ]
+    },
+    {
+      "id": "1105-113",
+      "start": {
+        "day": 113,
+        "year": 1105,
+        "abs": 403437
+      },
+      "end": {
+        "day": 113,
+        "year": 1105,
+        "abs": 403437
+      },
+      "location": "Arico (Arico El Nuevo)",
+      "title": "The BIAS CCR team arrives in system and sets up in the Starport District of the Arico El…",
+      "text": "The BIAS CCR team arrives in system and sets up in the Starport District of the Arico El Nuevo.",
+      "category": "party",
+      "sessions": [
+        33
+      ]
+    },
+    {
+      "id": "1105-114",
+      "start": {
+        "day": 114,
+        "year": 1105,
+        "abs": 403438
+      },
+      "end": {
+        "day": 114,
+        "year": 1105,
+        "abs": 403438
+      },
+      "location": "Arico",
+      "title": "Sarik gets treated for his Psionic Illness",
+      "text": "Sarik gets treated for his Psionic Illness. Isambard's is more serious. He needs 700,000 Creds. The BIAS CCR team takes a job for Joanna Lundquist, a Wu Ketai employee whose husband is missing.",
+      "category": "party",
+      "sessions": [
+        33
+      ]
+    },
+    {
+      "id": "1105-115",
+      "start": {
+        "day": 115,
+        "year": 1105,
+        "abs": 403439
+      },
+      "end": {
+        "day": 115,
+        "year": 1105,
+        "abs": 403439
+      },
+      "location": "Suliman/Arico",
+      "title": "The group arrives at the Suliman asteroid in the Arico system, and begin their undercover…",
+      "text": "The group arrives at the Suliman asteroid in the Arico system, and begin their undercover work to find Richard Lundquist. They are attacked by Ruffians and arrested before being released and warned to not cause trouble. They hack into the security feeds.",
+      "category": "party",
+      "sessions": [
+        34,
+        35
+      ]
+    },
+    {
+      "id": "1105-116",
+      "start": {
+        "day": 116,
+        "year": 1105,
+        "abs": 403440
+      },
+      "end": {
+        "day": 116,
+        "year": 1105,
+        "abs": 403440
+      },
+      "location": "Suliman/Arico",
+      "title": "The group gains access to the secret core labs, and find George Castle is an employee",
+      "text": "The group gains access to the secret core labs, and find George Castle is an employee",
+      "category": "party",
+      "sessions": [
+        36,
+        37
+      ]
+    },
+    {
+      "id": "1105-117",
+      "start": {
+        "day": 117,
+        "year": 1105,
+        "abs": 403441
+      },
+      "end": {
+        "day": 117,
+        "year": 1105,
+        "abs": 403441
+      },
+      "location": "Suliman/Arico",
+      "title": "The group finds evidence of chrono-siphoning technology and provides it to their contact…",
+      "text": "The group finds evidence of chrono-siphoning technology and provides it to their contact for their reward. They flee the asteroid taking a dozen intelligent simians with them.",
+      "category": "party",
+      "sessions": [
+        38,
+        39
+      ]
+    },
+    {
+      "id": "1105-118",
+      "start": {
+        "day": 118,
+        "year": 1105,
+        "abs": 403442
+      },
+      "end": {
+        "day": 118,
+        "year": 1105,
+        "abs": 403442
+      },
+      "location": "Eternity Station/Arico",
+      "title": "Arriving at Eternity",
+      "text": "Arriving at Eternity. The team is tasked by Teamster lead Reidmar to find out how a gambler, Hargon Sargon, is cheating.",
+      "category": "party",
+      "sessions": [
+        40
+      ]
+    },
+    {
+      "id": "1105-119",
+      "start": {
+        "day": 119,
+        "year": 1105,
+        "abs": 403443
+      },
+      "end": {
+        "day": 119,
+        "year": 1105,
+        "abs": 403443
+      },
+      "location": "Eternity Station/Arico",
+      "title": "The team pries the gambler's secret from a high end technology dealer named Solon",
+      "text": "The team pries the gambler's secret from a high end technology dealer named Solon. They earn the respect of Reidmar and learn that that Hargon Sargon has been murdered. The team solves Sargon's murder and meet Yandee, the Demon Princess.",
+      "category": "party",
+      "sessions": [
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "id": "1105-120",
+      "start": {
+        "day": 120,
+        "year": 1105,
+        "abs": 403444
+      },
+      "end": {
+        "day": 120,
+        "year": 1105,
+        "abs": 403444
+      },
+      "location": "Eternity Station/Arico",
+      "title": "The team undergoes augment surgery and spends the next seven days in slickbays",
+      "text": "The team undergoes augment surgery and spends the next seven days in slickbays.",
+      "category": "party",
+      "sessions": [
+        44
+      ]
+    },
+    {
+      "id": "1105-130",
+      "start": {
+        "day": 130,
+        "year": 1105,
+        "abs": 403454
+      },
+      "end": {
+        "day": 130,
+        "year": 1105,
+        "abs": 403454
+      },
+      "location": "Freeport/Arico",
+      "title": "The team arrives at Freeport and meets attorney Ridpath",
+      "text": "The team arrives at Freeport and meets attorney Ridpath. They begin the search for Louise Soto's killer.",
+      "category": "party",
+      "sessions": [
+        45
+      ]
+    },
+    {
+      "id": "1105-131",
+      "start": {
+        "day": 131,
+        "year": 1105,
+        "abs": 403455
+      },
+      "end": {
+        "day": 131,
+        "year": 1105,
+        "abs": 403455
+      },
+      "location": "Freeport/Arico",
+      "title": "Sarik is kidnapped and rescued",
+      "text": "Sarik is kidnapped and rescued.",
+      "category": "party",
+      "sessions": [
+        47,
+        48,
+        49
+      ]
+    },
+    {
+      "id": "1105-132",
+      "start": {
+        "day": 132,
+        "year": 1105,
+        "abs": 403456
+      },
+      "end": {
+        "day": 132,
+        "year": 1105,
+        "abs": 403456
+      },
+      "location": "Freeport/Arico",
+      "title": "The team resumes the search for Louise Soto's killer and the connection to Conde Borbon",
+      "text": "The team resumes the search for Louise Soto's killer and the connection to Conde Borbon. The team hears from Leeluz and heads to the Stardust. The team makes it way to Cafe Dimitri and finds some dead gangsters. They go to Park 32 to save Starca and find man with gun. Sky disarms the man with gun, and they decide to go meet Winslow Leach, whom they intimidate into taking his phone.",
+      "category": "party",
+      "sessions": [
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "id": "1105-133",
+      "start": {
+        "day": 133,
+        "year": 1105,
+        "abs": 403457
+      },
+      "end": {
+        "day": 133,
+        "year": 1105,
+        "abs": 403457
+      },
+      "location": "Freeport/Arico",
+      "title": "Starca in the bathroom; Plan to go to the event at the Stardust; Attend the Gala - Jollynn…",
+      "text": "Starca in the bathroom; Plan to go to the event at the Stardust; Attend the Gala - Jollynn is leaving. Raid on the Jollynn mansion. \"Yandee sends her regards\".",
+      "category": "party",
+      "sessions": [
+        54,
+        55,
+        56,
+        57
+      ]
+    },
+    {
+      "id": "1105-136",
+      "start": {
+        "day": 136,
+        "year": 1105,
+        "abs": 403460
+      },
+      "end": {
+        "day": 136,
+        "year": 1105,
+        "abs": 403460
+      },
+      "location": "Eternity Station",
+      "title": "Arrived at Eternity station",
+      "text": "Arrived at Eternity station. Prepared for travelling to Project Metropolis Station. Worked on self-improvement, gathering rumours, buying equipment, improving ship.",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-185",
+      "start": {
+        "day": 185,
+        "year": 1105,
+        "abs": 403509
+      },
+      "end": {
+        "day": 185,
+        "year": 1105,
+        "abs": 403509
+      },
+      "location": "Eternity Station",
+      "title": "Left for Project Metropolis",
+      "text": "Left for Project Metropolis",
+      "category": "party",
+      "sessions": []
+    },
+    {
+      "id": "1105-188",
+      "start": {
+        "day": 188,
+        "year": 1105,
+        "abs": 403512
+      },
+      "end": {
+        "day": 188,
+        "year": 1105,
+        "abs": 403512
+      },
+      "location": "Metropolis Station",
+      "title": "Arrived at Project Metropolis",
+      "text": "Arrived at Project Metropolis",
+      "category": "party",
+      "sessions": []
+    }
+  ]
+}

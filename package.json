@@ -1,0 +1,11 @@
+{
+  "name": "imperial_calendar",
+  "private": true,
+  "type": "module",
+  "description": "In-universe Imperial calendar for the Sector Solo Six Traveller campaign",
+  "scripts": {
+    "build": "node scripts/build-calendar.mjs",
+    "check": "node scripts/build-calendar.mjs --check",
+    "test": "node --test scripts/build-calendar.test.mjs"
+  }
+}
