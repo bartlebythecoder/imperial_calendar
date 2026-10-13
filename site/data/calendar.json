@@ -63,6 +63,25 @@
       "text": "Wu-Ketai announced successful breeding of uplifted simians."
     },
     {
+      "id": "1105-003",
+      "start": {
+        "day": 3,
+        "year": 1105,
+        "abs": 403327
+      },
+      "end": {
+        "day": 3,
+        "year": 1105,
+        "abs": 403327
+      },
+      "title": "Aridush Freedom Fighters seize Sanlucar",
+      "type": "news",
+      "location": "Sanlucar de Barram",
+      "system": "Sanlucar de Barram",
+      "sessions": [],
+      "text": "The Aridush Freedom Fighters under Giuliana Weber overthrew the Valentian government and took control of the moon."
+    },
+    {
       "id": "1105-018",
       "start": {
         "day": 18,
@@ -183,7 +202,83 @@
       "text": "Imperial officials expanded ship permissions to the major Line Companies."
     },
     {
+      "id": "1105-034",
+      "start": {
+        "day": 34,
+        "year": 1105,
+        "abs": 403358
+      },
+      "end": {
+        "day": 34,
+        "year": 1105,
+        "abs": 403358
+      },
+      "title": "Kidderminster recognizes the Commonwealth States",
+      "type": "news",
+      "location": "Kidderminster",
+      "system": "Kidderminster",
+      "sessions": [],
+      "text": "Kidderminster formally recognized the Aridush-led Commonwealth States as the legitimate government of Sanlucar, ending the crisis."
+    },
+    {
       "id": "1105-035",
+      "start": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "end": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "title": "Sanlucar appeals for reconstruction aid",
+      "type": "news",
+      "location": "Sanlucar de Barram",
+      "system": "Sanlucar de Barram",
+      "sessions": [],
+      "text": "Sanlucar requested life support and infrastructure experts, asking well-wishers to defer travel."
+    },
+    {
+      "id": "1105-035-2",
+      "start": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "end": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "title": "Maseru prison moons overcrowded",
+      "type": "news",
+      "location": "Maseru",
+      "system": "Maseru",
+      "sessions": [],
+      "text": "Maseru's prison moons saw a record influx of inmates amid delays to penal colony expansions."
+    },
+    {
+      "id": "1105-035-3",
+      "start": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "end": {
+        "day": 35,
+        "year": 1105,
+        "abs": 403359
+      },
+      "title": "Beaumont urges vigilance over Sanlucar",
+      "type": "news",
+      "location": "Beaumont",
+      "system": "Beaumont",
+      "sessions": [],
+      "text": "Supreme Leader Volkov urged the Imperium to keep a close watch on the new Sanlucar government."
+    },
+    {
+      "id": "1105-035-4",
       "start": {
         "day": 35,
         "year": 1105,
@@ -288,6 +383,25 @@
       "text": "BIAS CCR attended Lord Baltimore's formal dinner party."
     },
     {
+      "id": "1105-042",
+      "start": {
+        "day": 42,
+        "year": 1105,
+        "abs": 403366
+      },
+      "end": {
+        "day": 42,
+        "year": 1105,
+        "abs": 403366
+      },
+      "title": "Arico El Nuevo Torus centennial",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "The Torus residents celebrated their centennial anniversary with lavish festivities and tightened security."
+    },
+    {
       "id": "1105-043",
       "start": {
         "day": 43,
@@ -333,6 +447,25 @@
       "text": "BIAS CCR rescued the kidnapped Paolo and received Joey's protection offer. They rescued Tina, killed Bobby, and reported Joey to Koroleva."
     },
     {
+      "id": "1105-044-2",
+      "start": {
+        "day": 44,
+        "year": 1105,
+        "abs": 403368
+      },
+      "end": {
+        "day": 44,
+        "year": 1105,
+        "abs": 403368
+      },
+      "title": "Romentino travel restrictions lifted",
+      "type": "news",
+      "location": "Romentino",
+      "system": "Romentino",
+      "sessions": [],
+      "text": "The Imperial Navy lifted all travel restrictions to Romentino, restoring Green status."
+    },
+    {
       "id": "1105-047",
       "start": {
         "day": 47,
@@ -354,6 +487,44 @@
         20
       ],
       "text": "BIAS CCR infiltrated the Morella Mining settlement. Sarik went insane and attacked Dr. Smart. The group fought their way out and brought Dr. Smart for questioning. They escaped Romentino with Sky and Tina, bound for Csabai."
+    },
+    {
+      "id": "1105-049",
+      "start": {
+        "day": 49,
+        "year": 1105,
+        "abs": 403373
+      },
+      "end": {
+        "day": 49,
+        "year": 1105,
+        "abs": 403373
+      },
+      "title": "Duchess Margaret's cultural exchange tour",
+      "type": "news",
+      "location": "Kidderminster",
+      "system": "Kidderminster",
+      "sessions": [],
+      "text": "Duchess Margaret announced a subsector-wide cultural exchange initiative and grand tour."
+    },
+    {
+      "id": "1105-051",
+      "start": {
+        "day": 51,
+        "year": 1105,
+        "abs": 403375
+      },
+      "end": {
+        "day": 51,
+        "year": 1105,
+        "abs": 403375
+      },
+      "title": "Red Hand attack on the Morella outpost",
+      "type": "news",
+      "location": "Romentino",
+      "system": "Romentino",
+      "sessions": [],
+      "text": "The Red Hand claimed an attack that destroyed the Morella Mining outpost, killing all employees. Sweeps killed 45 Red Hand members including its leaders."
     },
     {
       "id": "1105-054",
@@ -396,6 +567,25 @@
         21
       ],
       "text": "The BIAS CCR group arrived at Starport Alpha, a starport orbiting the planet Csabai."
+    },
+    {
+      "id": "1105-056-2",
+      "start": {
+        "day": 56,
+        "year": 1105,
+        "abs": 403380
+      },
+      "end": {
+        "day": 56,
+        "year": 1105,
+        "abs": 403380
+      },
+      "title": "Csabai news roundup",
+      "type": "news",
+      "location": "Csabai",
+      "system": "Csabai",
+      "sessions": [],
+      "text": "Local reports covered a medical black market boom, an underworld power struggle, smuggling crackdowns, a housing crisis, trade negotiations, an art authenticity dispute, and gala preparations."
     },
     {
       "id": "1105-057",
@@ -459,6 +649,120 @@
       "system": "Csabai",
       "sessions": [],
       "text": "The BIAS CCR group entered a private clinic for augmentation surgery, recovery and physio."
+    },
+    {
+      "id": "1105-070",
+      "start": {
+        "day": 70,
+        "year": 1105,
+        "abs": 403394
+      },
+      "end": {
+        "day": 70,
+        "year": 1105,
+        "abs": 403394
+      },
+      "title": "Youst Refinery deal with Hexham Mining",
+      "type": "news",
+      "location": "Marcolandia",
+      "system": "Marcolandia",
+      "sessions": [],
+      "text": "Youst Refining was named sole refinery for all Hexham Mining output."
+    },
+    {
+      "id": "1105-077",
+      "start": {
+        "day": 77,
+        "year": 1105,
+        "abs": 403401
+      },
+      "end": {
+        "day": 77,
+        "year": 1105,
+        "abs": 403401
+      },
+      "title": "Foust Refinery hiring scramble",
+      "type": "news",
+      "location": "Marcolandia",
+      "system": "Marcolandia",
+      "sessions": [],
+      "text": "Foust Refinery began tripling its workforce, signing a prisoner work contract with the Ouro Correction department."
+    },
+    {
+      "id": "1105-079",
+      "start": {
+        "day": 79,
+        "year": 1105,
+        "abs": 403403
+      },
+      "end": {
+        "day": 79,
+        "year": 1105,
+        "abs": 403403
+      },
+      "title": "Uplifted apes appear in public",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "Wu-Ketai confirmed its uplifted apes were \"out in the field\" with a closed circle of customers, though not yet available to the general public."
+    },
+    {
+      "id": "1105-080",
+      "start": {
+        "day": 80,
+        "year": 1105,
+        "abs": 403404
+      },
+      "end": {
+        "day": 80,
+        "year": 1105,
+        "abs": 403404
+      },
+      "title": "Warning letter to \"S\"",
+      "type": "news",
+      "location": "Tutin",
+      "system": "Tutin",
+      "sessions": [],
+      "text": "A letter warned \"S\" that a man with a fake smile and missing fingers was asking around town for him."
+    },
+    {
+      "id": "1105-080-2",
+      "start": {
+        "day": 80,
+        "year": 1105,
+        "abs": 403404
+      },
+      "end": {
+        "day": 80,
+        "year": 1105,
+        "abs": 403404
+      },
+      "title": "Lord Baltimore's intel on Romentino",
+      "type": "news",
+      "location": "Kidderminster",
+      "system": "Kidderminster",
+      "sessions": [],
+      "text": "Lord Baltimore reported that Tres had threatened to hand Dr. Smart to the Blackshirts, the Morella outpost was destroyed hours after BIAS CCR left, and the Banks declared war on the Red Hand."
+    },
+    {
+      "id": "1105-087",
+      "start": {
+        "day": 87,
+        "year": 1105,
+        "abs": 403411
+      },
+      "end": {
+        "day": 87,
+        "year": 1105,
+        "abs": 403411
+      },
+      "title": "Nesvorny University ancient research",
+      "type": "news",
+      "location": "Nesvorny",
+      "system": "Nesvorny",
+      "sessions": [],
+      "text": "Nesvorny University scholars presented controversial research linking Ancient civilizations to genetically altered local fauna."
     },
     {
       "id": "1105-089",
@@ -545,6 +849,25 @@
       "text": "Beck entered LSP HQ on Csabai. Will she ever leave? Sarik and Isambard, with Tina's help, bought information from an Irklan named Reshka: a photo of who hired the Irklan assassin, and word that he is likely in the Psalmist Center in Basin City."
     },
     {
+      "id": "1105-092-2",
+      "start": {
+        "day": 92,
+        "year": 1105,
+        "abs": 403416
+      },
+      "end": {
+        "day": 92,
+        "year": 1105,
+        "abs": 403416
+      },
+      "title": "Marcolandia lifter shortage",
+      "type": "news",
+      "location": "Marcolandia",
+      "system": "Marcolandia",
+      "sessions": [],
+      "text": "A shortage of contra-grav lifters hit independent corporations as supply was tied up in exclusive deals."
+    },
+    {
       "id": "1105-093",
       "start": {
         "day": 93,
@@ -564,6 +887,25 @@
         28
       ],
       "text": "Isambard and Sarik went to Basin City and entered the Psalmist Center, where Sarik ended up shooting the man they were looking for, Guillaume."
+    },
+    {
+      "id": "1105-093-2",
+      "start": {
+        "day": 93,
+        "year": 1105,
+        "abs": 403417
+      },
+      "end": {
+        "day": 93,
+        "year": 1105,
+        "abs": 403417
+      },
+      "title": "Sabrina to perform on Csabai",
+      "type": "news",
+      "location": "Csabai",
+      "system": "Csabai",
+      "sessions": [],
+      "text": "Kidderminster singing sensation Sabrina planned a series of concerts on Csabai as part of the Duchess Margaret Cultural Exchange Tour."
     },
     {
       "id": "1105-094",
@@ -588,6 +930,44 @@
       "text": "The BIAS CCR team hunted down Jacob, who had a data wafer with incriminating evidence. They found him and the wafer, removed the orb references, and turned him over to the authorities. The team left the planet on their new Scout ship, the Raconteur."
     },
     {
+      "id": "1105-097",
+      "start": {
+        "day": 97,
+        "year": 1105,
+        "abs": 403421
+      },
+      "end": {
+        "day": 97,
+        "year": 1105,
+        "abs": 403421
+      },
+      "title": "Sanlucar reconstruction hampered",
+      "type": "news",
+      "location": "Sanlucar de Barram",
+      "system": "Sanlucar de Barram",
+      "sessions": [],
+      "text": "President Weber appealed for interstellar aid as reconstruction was hampered by shortages of heavy construction equipment."
+    },
+    {
+      "id": "1105-098",
+      "start": {
+        "day": 98,
+        "year": 1105,
+        "abs": 403422
+      },
+      "end": {
+        "day": 98,
+        "year": 1105,
+        "abs": 403422
+      },
+      "title": "Psalmist leader behind local crime ring",
+      "type": "news",
+      "location": "Csabai",
+      "system": "Csabai",
+      "sessions": [],
+      "text": "Authorities arrested three people including Darlene Suitor, head of the Csabai Psalmist Center, over an illegal drug ring."
+    },
+    {
       "id": "1105-099",
       "start": {
         "day": 99,
@@ -607,6 +987,25 @@
         30
       ],
       "text": "The BIAS CCR team arrived at the system's jump point and jumped for Marcolandia."
+    },
+    {
+      "id": "1105-099-2",
+      "start": {
+        "day": 99,
+        "year": 1105,
+        "abs": 403423
+      },
+      "end": {
+        "day": 99,
+        "year": 1105,
+        "abs": 403423
+      },
+      "title": "Kidderminster stock exchange surge",
+      "type": "news",
+      "location": "Kidderminster",
+      "system": "Kidderminster",
+      "sessions": [],
+      "text": "The Kidderminster Stock Exchange saw record trading volume as speculators bet big on Sanlucar pressure crystal futures."
     },
     {
       "id": "1105-103",
@@ -714,6 +1113,44 @@
         33
       ],
       "text": "The BIAS CCR team arrived in the system and set up in the Starport District of Arico El Nuevo."
+    },
+    {
+      "id": "1105-113-2",
+      "start": {
+        "day": 113,
+        "year": 1105,
+        "abs": 403437
+      },
+      "end": {
+        "day": 113,
+        "year": 1105,
+        "abs": 403437
+      },
+      "title": "Cairo District lynching",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "An angry mob in Freeport's Cairo district killed Dario Caminante, a man accused of telepathy, amid anti-telepath hysteria."
+    },
+    {
+      "id": "1105-113-3",
+      "start": {
+        "day": 113,
+        "year": 1105,
+        "abs": 403437
+      },
+      "end": {
+        "day": 113,
+        "year": 1105,
+        "abs": 403437
+      },
+      "title": "Murder in The Lux",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "Louise Soto, a Wu-Ketai graphic designer, was shot dead by a masked gunman in The Lux in the Humboldt District."
     },
     {
       "id": "1105-114",
@@ -868,6 +1305,25 @@
       "text": "The team underwent augment surgery and spent the next seven days in slickbays."
     },
     {
+      "id": "1105-129",
+      "start": {
+        "day": 129,
+        "year": 1105,
+        "abs": 403453
+      },
+      "end": {
+        "day": 129,
+        "year": 1105,
+        "abs": 403453
+      },
+      "title": "Sabrina to visit Freeport",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "Sabrina planned to visit Freeport from 145-1105 for two weeks as part of the Duchess Margaret Cultural Exchange Tour."
+    },
+    {
       "id": "1105-130",
       "start": {
         "day": 130,
@@ -887,6 +1343,25 @@
         45
       ],
       "text": "The team arrived at Freeport, met attorney Ridpath, and began the search for Louise Soto's killer."
+    },
+    {
+      "id": "1105-130-2",
+      "start": {
+        "day": 130,
+        "year": 1105,
+        "abs": 403454
+      },
+      "end": {
+        "day": 130,
+        "year": 1105,
+        "abs": 403454
+      },
+      "title": "Six dead in Cairo violence",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "Anti-psionic vigilantes stormed a housing project in the Cairo district, lynching a mother and daughter; three vigilantes were killed by authorities. Martial law was declared."
     },
     {
       "id": "1105-131",
@@ -910,6 +1385,44 @@
         49
       ],
       "text": "Sarik was kidnapped and rescued."
+    },
+    {
+      "id": "1105-131-2",
+      "start": {
+        "day": 131,
+        "year": 1105,
+        "abs": 403455
+      },
+      "end": {
+        "day": 131,
+        "year": 1105,
+        "abs": 403455
+      },
+      "title": "Banks post record results",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "Lenders Montanes Financial and Jollynn Trust posted record profits, while Tagarro Trust missed expectations."
+    },
+    {
+      "id": "1105-131-3",
+      "start": {
+        "day": 131,
+        "year": 1105,
+        "abs": 403455
+      },
+      "end": {
+        "day": 131,
+        "year": 1105,
+        "abs": 403455
+      },
+      "title": "Reidmar calls a general strike",
+      "type": "news",
+      "location": "Eternity Station / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "After the Stratemeyer executions of hostages, Reidmar called a general strike on Eternity Station, halting all ship traffic."
     },
     {
       "id": "1105-132",
@@ -960,6 +1473,25 @@
       "text": "Starca in the bathroom, and a plan to go to the event at the Stardust. At the Gala, Jollynn was leaving. Then the raid on the Jollynn mansion: \"Yandee sends her regards.\""
     },
     {
+      "id": "1105-134",
+      "start": {
+        "day": 134,
+        "year": 1105,
+        "abs": 403458
+      },
+      "end": {
+        "day": 134,
+        "year": 1105,
+        "abs": 403458
+      },
+      "title": "Orslo Jollynn murdered",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "sessions": [],
+      "text": "Financier Orslo Jollynn was found murdered at her mansion in a gangland-style execution, revealed to be the clandestine leader of the Stratemeyer Syndicate."
+    },
+    {
       "id": "1105-136",
       "start": {
         "day": 136,
@@ -977,6 +1509,44 @@
       "system": "Arico",
       "sessions": [],
       "text": "Back at Eternity Station, preparing for the trip to Metropolis Station: self-improvement, gathering rumours, buying equipment and improving the ship."
+    },
+    {
+      "id": "1105-170",
+      "start": {
+        "day": 170,
+        "year": 1105,
+        "abs": 403494
+      },
+      "end": {
+        "day": 170,
+        "year": 1105,
+        "abs": 403494
+      },
+      "title": "Megacorporation news summary",
+      "type": "news",
+      "location": "Subsector-wide",
+      "system": "Subsector-wide",
+      "sessions": [],
+      "text": "Hortalez et Cie won a major contract managing the Csabai planetary government's technology solutions, a blow to Ling Standard Products who had held the account for twelve years. On Kidderminster, Hortalez won a military contract for the Kidderminster Navy, beating out Tukera Lines, whose Subsector President is married to Duchess Margaret. On Marcolandia, LSP fought off a Hortalez bid for the Foust refinery and three gas giant mining operations, as LSP pushes for a foothold in super-metal mining from the gas giant Vilnohirsk. On the Arico market, Hortalez rose 7 to 186, LSP fell 1.5 to 141.5, and Tukera Lines fell 5.5 to 97.5."
+    },
+    {
+      "id": "1105-170-2",
+      "start": {
+        "day": 170,
+        "year": 1105,
+        "abs": 403494
+      },
+      "end": {
+        "day": 170,
+        "year": 1105,
+        "abs": 403494
+      },
+      "title": "Psalmist watch",
+      "type": "news",
+      "location": "Subsector-wide",
+      "system": "Subsector-wide",
+      "sessions": [],
+      "text": "On Arico, news of Orslo Jollynn's criminal activity bolstered the populist Psalmist community, who cite it as evidence for rejecting the love of celebrity and wealth; Psalmist groups recorded record interest and participation on Freeport and around the Belt, and Arico is seen as the informal center of Psalmist activity in the subsector. On Csabai, Psalmists kept a low profile since the arrest of Darlene Suitor, with local leaders distancing themselves from her group as \"an unfortunate militant group that has nothing to do with true Psalmism.\" On Marcolandia, at least one Psalmist center is closing due to the growing influence of Ling Standard Products, which is known to support organizations limiting Psalmist influence and bars known Psalmists from senior positions."
     },
     {
       "id": "1105-185",
