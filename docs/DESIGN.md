@@ -29,48 +29,46 @@ Internally, every date is stored as one **absolute day number**, `year × 365 + 
 
 ## 2. Source format: `ss6_timeline.md`
 
-The GM keeps writing the note as now, with two additions.
+The timeline note uses a fixed, human-readable format that the calendar reads directly. There are no guessing rules and no corrections file: what the note says is what the calendar shows. The note carries a collapsed "How to write an entry" callout as a reminder.
 
-**Frontmatter "today" counter:**
-
-```yaml
+```markdown
 ---
 aliases:
   - SS6 Timeline
-current_date: 212-1105
+current_date: 200-1105
 ---
+
+# 1105
+
+## 023-1105 to 036-1105 - The Mirassol dig
+where: Mirassol
+type: party
+aar: [[ss6_aar_summary_1_5]]
+
+BIAS CCR spent 18 local days investigating the archaeological site
+and recovering the mysterious orb.
 ```
 
-**Optional category tag at the end of an entry:**
-
-```
-025-1105 - Nesvorny: Government announced MCr 45.0 Pharr care package. #news
-099-1105 Csabai: The team jumps for Marcolandia. #travel
-```
-
-| Tag | Meaning |
+| Part | Rule |
 | --- | --- |
-| *(none)* | **party**: what BIAS CCR did |
-| `#news` | Background or in-world news |
-| `#travel` | Jumps, transits, arrivals |
-| `#downtime` | Long stretches: clinics, layovers |
-| `#deadline` | Something due on a date |
-| `#finance` | Payments, pay-outs, debts |
+| `current_date` | In the frontmatter. "Today" on the calendar; later entries show as forecasts. |
+| `## ` heading | One per entry: a date (`DDD-YYYY`, or `DDD-YYYY to DDD-YYYY` for a span), ` - `, then a short title for calendar cells. |
+| `where:` | Optional. A place, or `Place / System`; the part after the last `/` is used for the system filter. |
+| `type:` | Optional. One of the six types below; defaults to `party`. |
+| `aar:` | Optional. AAR links, e.g. `[[ss6_aar_summary_31_32]]`. Shown as "Sessions 31–32". The AARs themselves are not published. |
+| Description | Any paragraphs after the fields. Wiki links show as plain text, using the alias when given. |
+| `# 1105` | Year headings, for reading only; ignored. Anything before the first entry is ignored too. |
 
-Entries dated after `current_date` are shown as **forecasts** automatically. There are no recurring rules, no GM-only filter (everything in the note is player-safe), and no extra markup.
+| Type | Meaning |
+| --- | --- |
+| `party` | What BIAS CCR did (default) |
+| `news` | Background or in-world news |
+| `travel` | Jumps, transits, arrivals |
+| `downtime` | Long stretches: clinics, layovers |
+| `deadline` | Something due on a date |
+| `finance` | Payments, pay-outs, debts |
 
-### Parsing rules (written to match the existing note)
-
-- **Each entry starts with a date at the beginning of a line.** It runs until the next date line, so continuation lines such as `([[ss6_aar_summary_9]])` on their own line belong to the previous entry.
-- **Accepted date forms:**
-  - `047-1105` (single day)
-  - `023-036-1105` (range within a year)
-  - `360-1105-010-1106` (range across years)
-- **The location is optional.** It is the text before the first `:`, as in `Romentino:` or `Suliman/Arico:`. Entries such as `039-1105 - Meet Lord Baltimore` have no location and are still accepted.
-- **AAR links** like `[[…/ss6_aar_summary_31_32]]` are not shown as links. They are turned into a **session chip** ("Sessions 31–32"), and the AARs themselves are not published.
-- **Other wiki links** (`[[Cafe_Dimitri]]`, `[[sector_solo_6|Sector Solo Six]]`) are shown as plain text, using the alias if there is one. Turning them into wiki links is a later step.
-- **Header lines** (`Created:`, `Last modified:`, `Timeline of …`, `----`) are ignored.
-- **A date-like line the script can't parse fails the build with a clear message.** A line is never silently dropped.
+**Mistakes stop the publish with the line number.** This covers a heading without a valid date, a day outside 001–365, a span that ends before it starts, a missing title, or an unknown type. An entry is never silently dropped.
 
 ## 3. Generated data
 
@@ -78,23 +76,24 @@ Entries dated after `current_date` are shown as **forecasts** automatically. The
 
 ```json
 {
-  "current": { "day": 212, "year": 1105, "abs": 403536 },
+  "current": { "day": 200, "year": 1105, "abs": 403524 },
   "events": [
     {
       "id": "1105-023",
       "start": { "day": 23, "year": 1105, "abs": 403347 },
       "end":   { "day": 36, "year": 1105, "abs": 403360 },
+      "title": "The Mirassol dig",
+      "type": "party",
       "location": "Mirassol",
-      "title": "BIAS CCR spent 18 local days investigating archaeological site and recovering the…",
-      "text": "BIAS CCR spent 18 local days investigating ...",
-      "category": "party",
-      "sessions": [1, 2, 3, 4, 5]
+      "system": "Mirassol",
+      "sessions": [1, 2, 3, 4, 5],
+      "text": "BIAS CCR spent 18 local days investigating ..."
     }
   ]
 }
 ```
 
-The file has no build timestamp, so if nothing in the note changed, the output is identical and there is nothing to commit. `title` is the first sentence of the text, shortened if needed, for use in calendar cells. The date arithmetic lives in `site/js/calendar-math.js`, which both the build script and the site use.
+The file has no build timestamp, so if nothing in the note changed, the output is identical and there is nothing to commit. The date arithmetic lives in `site/js/calendar-math.js`, which both the build script and the site use.
 
 The site only reads this file. The same file could later feed the BIAS CCR Bot, so it could answer questions like "when did we arrive at Csabai?"
 
@@ -103,19 +102,19 @@ The site only reads this file. The same file could later feed the BIAS CCR Bot, 
 Every view can be bookmarked or shared through the URL hash, e.g. `#/1105/207`.
 
 **Header ("ship's clock")**, always shown:
-- the current date, e.g. `212-1105 · Sunday · Week 31 · Month 8`
+- the current date, e.g. `200-1105 · Tuesday · Week 29 · Month 8`
 - the next forecast event, e.g. "Next: Arrive Baltimore in 3 days"
 - buttons to switch views, plus "Jump to today"
 
 | View | URL | Purpose |
 | --- | --- | --- |
 | **Year** | `#/1105` | Big picture: 13 month grids plus the Holiday cell. Each day is shaded by how many events it has, and range events show as thin bars. The current day glows. Past days are dim; forecast days are outlined. Clicking a day opens it in Month view. |
-| **Month** | `#/1105/m8` | 4 × 7 grid with event titles in their category colour and range events as bars across days. Month 1 also shows a **Holiday** banner. |
-| **Day panel** | `#/1105/207` | Slides in beside Month or Year view: the full text, location, session chips and category for every event on that day, plus any range covering it. |
+| **Month** | `#/1105/m8` | 4 × 7 grid with event titles in their type colour and range events as bars across days. Month 1 also shows a **Holiday** banner. |
+| **Day panel** | `#/1105/207` | Slides in beside Month or Year view: the full text, location, session chips and type for every event on that day, plus any range covering it. |
 | **Chronicle** | `#/chronicle` | A vertical log of everything, newest or oldest first, grouped by month. It includes a "▶ TODAY" divider separating history from forecasts. |
 
 **Available in every view:**
-- category filter toggles
+- type filter toggles
 - a location filter (built from the locations in the data)
 - text search
 - keyboard shortcuts:
@@ -163,7 +162,7 @@ call "C:\Users\sean\Documents\github\imperial_calendar\scripts\publish-calendar.
 `publish-calendar.bat` does three things:
 
 1. builds `calendar.json` from the timeline;
-2. if the result changed, commits it ("Calendar update to 212-1105") and pushes;
+2. if the result changed, commits it ("Calendar update to 200-1105") and pushes;
 3. if the build fails, prints the reason and still lets the wiki sync finish.
 
 GitHub Pages redeploys about a minute later.
@@ -185,8 +184,7 @@ GitHub Pages redeploys about a minute later.
 | **5. Publish** | `publish-calendar.bat` and the line added to `run_sync.bat` | The Obsidian button updates both sites |
 
 **GM tasks** (the vault is read-only to Claude, so these are yours):
-- Add `current_date` to the timeline's frontmatter.
-- Tag the existing entries. I can provide a suggested list of tags per line.
+- Review the draft `ss6_timeline.md` in this repo; when happy, move it into the vault to replace the old note.
 - Add the events from 189 to 212, since the note currently ends at 188-1105.
 
 ## 9. Later
