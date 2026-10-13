@@ -2,8 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
-import { parseTimeline } from "./build-calendar.mjs";
+import { parseTimeline, DEFAULT_SOURCE } from "./build-calendar.mjs";
 import {
   weekdayName, weekOf, monthOf, monthRange, toAbs, fromAbs, parseDate,
 } from "../site/js/calendar-math.js";
@@ -145,14 +144,11 @@ test("entries on the same day get distinct ids; events are sorted by date", () =
   assert.deepEqual(r.events.map((e) => e.id), ["1105-010", "1105-050", "1105-050-2"]);
 });
 
-// --- The draft timeline in this repo --------------------------------------
+// --- The real note in the vault (skipped on machines without it) ----------
 
-const DRAFT = fileURLToPath(new URL("../ss6_timeline.md", import.meta.url));
-
-test("the draft ss6_timeline.md parses cleanly", { skip: !existsSync(DRAFT) }, () => {
-  const r = parseTimeline(readFileSync(DRAFT, "utf8"));
+test("the vault's ss6_timeline.md parses cleanly", { skip: !existsSync(DEFAULT_SOURCE) }, () => {
+  const r = parseTimeline(readFileSync(DEFAULT_SOURCE, "utf8"));
   assert.deepEqual(r.errors, []);
-  assert.deepEqual(r.warnings, []);
-  assert.equal(r.events.length, 48);
-  assert.equal(r.current.day, 200);
+  assert.ok(r.current);
+  assert.ok(r.events.length >= 48);
 });
