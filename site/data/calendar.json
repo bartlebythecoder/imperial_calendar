@@ -1969,7 +1969,7 @@
         52,
         53
       ],
-      "text": "The team resumed the search for Louise Soto's killer and the connection to Conde Borbon. They heard from Leeluz and headed to the Stardust, then made their way to [[cafe-dimitri|Cafe Dimitri]] and found some dead gangsters. They went to Park 32 to save Starca and found a man with a gun. Sky disarmed him, and they went to meet Winslow Leach, whom they intimidated into handing over his phone."
+      "text": "The team resumed the search for Louise Soto's killer and the connection to Conde Borbon. They heard from Leeluz and headed to the Stardust, then made their way to [[cafe-dimitri|Dimitri's]] and found some dead gangsters. They went to Park 32 to save Starca and found a man with a gun. Sky disarmed him, and they went to meet Winslow Leach, whom they intimidated into handing over his phone."
     },
     {
       "id": "1105-133",
@@ -2398,6 +2398,114 @@
         79
       ],
       "text": "The crew armed the [[nuclear-warhead|Nuclear Warhead]] beneath the station, negotiated safe passage with [[conway|Conway]], and escaped with the [[duchess-margaret|Duchess]]'s cloned body. The warhead detonated, destroying [[metropolis-station|Metropolis Station]] and [[monarch|Monarch]]."
+    },
+    {
+      "id": "1105-212",
+      "start": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "end": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "title": "Jollynn murder still unsolved",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
+      "sessions": [],
+      "text": "source: ss6 news 1105 vol 10\n\nAuthorities made no arrest in the Orslo Jollynn murder, believing professionals hired by a rival drug cartel are off-planet."
+    },
+    {
+      "id": "1105-212-2",
+      "start": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "end": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "title": "Wu-Ketai faces dual investigations",
+      "type": "news",
+      "location": "Arico El Nuevo / Arico",
+      "system": "Arico",
+      "places": [
+        {
+          "name": "Arico El Nuevo",
+          "slug": "arico-el-nuevo"
+        },
+        {
+          "name": "Arico",
+          "slug": "arico-el-nuevo"
+        }
+      ],
+      "sessions": [],
+      "text": "source: ss6 news 1105 vol 10\n\nPresident David Ives faced pressure from separate Subsector and Imperial investigations into Risiano Tiler's report on illegal experiments on the Suliman Asteroid, weighing on Wu-Ketai and Hortalez share prices."
+    },
+    {
+      "id": "1105-212-3",
+      "start": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "end": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "title": "Megacorporation news summary",
+      "type": "news",
+      "location": "Subsector-wide",
+      "system": "Subsector-wide",
+      "places": [
+        {
+          "name": "Subsector-wide",
+          "slug": null
+        }
+      ],
+      "sessions": [],
+      "text": "source: ss6 news 1105 vol 10\n\nHortalez et Cie denied knowledge of Wu-Ketai's alleged illegal aging experiments, while Tukera bought an undisclosed block of Hortalez shares, reportedly under pressure from the Imperial governor's office. On Marcolandia, Ling Standard Products finally won controlling interest in a number of refineries. On Kidderminster, Hortalez's banking line became the official financial provider for the Subsector Navy, displacing Tukera Lines. On the Arico market, Hortalez fell 3 to 183, LSP rose 3.5 to 145, and Tukera fell 0.5 to 97."
+    },
+    {
+      "id": "1105-212-4",
+      "start": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "end": {
+        "day": 212,
+        "year": 1105,
+        "abs": 403536
+      },
+      "title": "Psalmist watch",
+      "type": "news",
+      "location": "Subsector-wide",
+      "system": "Subsector-wide",
+      "places": [
+        {
+          "name": "Subsector-wide",
+          "slug": null
+        }
+      ],
+      "sessions": [],
+      "text": "source: ss6 news 1105 vol 10\n\nOn Arico, a financial scandal involving a Freeport Psalmist leader cut influence from 5/6 to 4/6, though popularity on Eternity Station held. On Kidderminster, an official Psalmist Center opened, raising influence from 2/6 to 3/6. Formal Psalmist organizations also started on Nesvorny and Sanlucar, raising influence from 1/2 to 2/6."
     }
   ]
 }
