@@ -2589,6 +2589,60 @@
       "text": ""
     },
     {
+      "id": "1105-221",
+      "start": {
+        "day": 221,
+        "year": 1105,
+        "abs": 403545
+      },
+      "end": {
+        "day": 221,
+        "year": 1105,
+        "abs": 403545
+      },
+      "title": "Party leaves Marcolandia for Tutin",
+      "type": "party",
+      "location": "Marcolandia",
+      "system": "Marcolandia",
+      "places": [
+        {
+          "name": "Marcolandia",
+          "slug": "marcolandia"
+        }
+      ],
+      "sessions": [
+        82
+      ],
+      "text": ""
+    },
+    {
+      "id": "1105-221-2",
+      "start": {
+        "day": 221,
+        "year": 1105,
+        "abs": 403545
+      },
+      "end": {
+        "day": 228,
+        "year": 1105,
+        "abs": 403552
+      },
+      "title": "Party in Jump",
+      "type": "travel",
+      "location": "On the Raconteur in Jumpspace",
+      "system": "On the Raconteur in Jumpspace",
+      "places": [
+        {
+          "name": "On the Raconteur in Jumpspace",
+          "slug": null
+        }
+      ],
+      "sessions": [
+        82
+      ],
+      "text": ""
+    },
+    {
       "id": "1105-228",
       "start": {
         "day": 228,
