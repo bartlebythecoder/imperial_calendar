@@ -1,8 +1,8 @@
 {
   "current": {
-    "day": 228,
+    "day": 230,
     "year": 1105,
-    "abs": 403552
+    "abs": 403554
   },
   "wiki": "https://bartlebythecoder.github.io/bias_ccr_bot/",
   "events": [
@@ -2654,11 +2654,69 @@
         "year": 1105,
         "abs": 403552
       },
-      "title": "Party arrives at Tutin",
+      "title": "Party arrives in the Tutin system",
       "type": "party",
       "location": "Tutin",
       "system": "Tutin",
       "places": [
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        82
+      ],
+      "text": ""
+    },
+    {
+      "id": "1105-228-2",
+      "start": {
+        "day": 228,
+        "year": 1105,
+        "abs": 403552
+      },
+      "end": {
+        "day": 230,
+        "year": 1105,
+        "abs": 403554
+      },
+      "title": "Party travels in-system to Tutin",
+      "type": "travel",
+      "location": "On the Raconteur in the Tutin system",
+      "system": "On the Raconteur in the Tutin system",
+      "places": [
+        {
+          "name": "On the Raconteur in the Tutin system",
+          "slug": null
+        }
+      ],
+      "sessions": [
+        82
+      ],
+      "text": ""
+    },
+    {
+      "id": "1105-230",
+      "start": {
+        "day": 230,
+        "year": 1105,
+        "abs": 403554
+      },
+      "end": {
+        "day": 230,
+        "year": 1105,
+        "abs": 403554
+      },
+      "title": "Party reaches Tutin orbit and descends to Hampton",
+      "type": "party",
+      "location": "Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
         {
           "name": "Tutin",
           "slug": "tutin"
