@@ -1,8 +1,8 @@
 {
   "current": {
-    "day": 230,
+    "day": 231,
     "year": 1105,
-    "abs": 403554
+    "abs": 403555
   },
   "wiki": "https://bartlebythecoder.github.io/bias_ccr_bot/",
   "events": [
@@ -2726,6 +2726,99 @@
         82
       ],
       "text": ""
+    },
+    {
+      "id": "1105-230-2",
+      "start": {
+        "day": 230,
+        "year": 1105,
+        "abs": 403554
+      },
+      "end": {
+        "day": 230,
+        "year": 1105,
+        "abs": 403554
+      },
+      "title": "Desperado Karaoke Bar and the Admiral Grace Inn",
+      "type": "party",
+      "location": "Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        83
+      ],
+      "text": "Jiro hosted the group at Hampton's Desperado Karaoke Bar, where Slim warned that spies were everywhere; a local named Saul confronted them over the simians, but Sarik defused it and Isambard's singing won the crowd."
+    },
+    {
+      "id": "1105-231",
+      "start": {
+        "day": 231,
+        "year": 1105,
+        "abs": 403555
+      },
+      "end": {
+        "day": 231,
+        "year": 1105,
+        "abs": 403555
+      },
+      "title": "Lars Tanaka's statue and the weapons release",
+      "type": "party",
+      "location": "Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        83
+      ],
+      "text": "Beck paid a starport bureaucrat five thousand credits to secure the rifles for the morning of day 232"
+    },
+    {
+      "id": "1105-231-2",
+      "start": {
+        "day": 231,
+        "year": 1105,
+        "abs": 403555
+      },
+      "end": {
+        "day": 231,
+        "year": 1105,
+        "abs": 403555
+      },
+      "title": "The visit to Deborah's ranch",
+      "type": "party",
+      "location": "Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        83
+      ],
+      "text": "Asher, Isambard, and Sky walked three or four hours to Deborah's ranch"
     }
   ]
 }
