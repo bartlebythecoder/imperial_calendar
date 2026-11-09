@@ -1,8 +1,8 @@
 {
   "current": {
-    "day": 231,
+    "day": 235,
     "year": 1105,
-    "abs": 403555
+    "abs": 403559
   },
   "wiki": "https://bartlebythecoder.github.io/bias_ccr_bot/",
   "events": [
@@ -2819,6 +2819,134 @@
         83
       ],
       "text": "Asher, Isambard, and Sky walked three or four hours to Deborah's ranch"
+    },
+    {
+      "id": "1105-231-3",
+      "start": {
+        "day": 231,
+        "year": 1105,
+        "abs": 403555
+      },
+      "end": {
+        "day": 231,
+        "year": 1105,
+        "abs": 403555
+      },
+      "title": "Sybil, Deborah and the corpse at the ranch",
+      "type": "party",
+      "location": "Deborah's Ranch / Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Deborah's Ranch",
+          "slug": null
+        },
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        84
+      ],
+      "text": "Sybil threatened the visitors with a shotgun, then took 500 credits to bring Deborah in. Deborah described Duquette, eight armed men and Dr. Pearson's ground-floor suite. Gerald sat breathing on an iron lung, but was already dead."
+    },
+    {
+      "id": "1105-232",
+      "start": {
+        "day": 232,
+        "year": 1105,
+        "abs": 403556
+      },
+      "end": {
+        "day": 232,
+        "year": 1105,
+        "abs": 403556
+      },
+      "title": "The march north from Hampton",
+      "type": "travel",
+      "location": "Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        84
+      ],
+      "text": "The group set out north with Isaiah's masks and charges and a kill switch for the ranch's sensors. Beck watched for pursuers through the night."
+    },
+    {
+      "id": "1105-233",
+      "start": {
+        "day": 233,
+        "year": 1105,
+        "abs": 403557
+      },
+      "end": {
+        "day": 234,
+        "year": 1105,
+        "abs": 403558
+      },
+      "title": "Wilderness trek to the ranch",
+      "type": "travel",
+      "location": "Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        84
+      ],
+      "text": "Hill monkeys raided the camp and stole Beck's binoculars and Sarik's goggles. Sarik guided the party around a rock squid."
+    },
+    {
+      "id": "1105-235",
+      "start": {
+        "day": 235,
+        "year": 1105,
+        "abs": 403559
+      },
+      "end": {
+        "day": 235,
+        "year": 1105,
+        "abs": 403559
+      },
+      "title": "Camp overlooking the ranch",
+      "type": "party",
+      "location": "Deborah's Ranch / Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Deborah's Ranch",
+          "slug": null
+        },
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        84
+      ],
+      "text": "The exhausted party made camp in the forest above the ranch. The kill switch was still unused."
     }
   ]
 }
