@@ -1,8 +1,8 @@
 {
   "current": {
-    "day": 235,
+    "day": 236,
     "year": 1105,
-    "abs": 403559
+    "abs": 403560
   },
   "wiki": "https://bartlebythecoder.github.io/bias_ccr_bot/",
   "events": [
@@ -2927,11 +2927,11 @@
       },
       "title": "Camp overlooking the ranch",
       "type": "party",
-      "location": "Deborah's Ranch / Hampton / Tutin",
+      "location": "Ranch / Hampton / Tutin",
       "system": "Tutin",
       "places": [
         {
-          "name": "Deborah's Ranch",
+          "name": "Ranch",
           "slug": null
         },
         {
@@ -2947,6 +2947,41 @@
         84
       ],
       "text": "The exhausted party made camp in the forest above the ranch. The kill switch was still unused."
+    },
+    {
+      "id": "1105-236",
+      "start": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "end": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "title": "Camp overlooking the ranch",
+      "type": "party",
+      "location": "Ranch / Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Ranch",
+          "slug": null
+        },
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        84
+      ],
+      "text": "The party eliminated Rajiv and captures Rene."
     }
   ]
 }
