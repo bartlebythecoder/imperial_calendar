@@ -2982,6 +2982,111 @@
         84
       ],
       "text": "The party eliminated Rajiv and captures Rene."
+    },
+    {
+      "id": "1105-236-2",
+      "start": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "end": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "title": "Sarik takes Rajiv's nanite belt",
+      "type": "party",
+      "location": "Ranch / Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Ranch",
+          "slug": null
+        },
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        86
+      ],
+      "text": "Late in the afternoon the party questioned Rene about Rajiv's belt, then Sarik adjusted it to fit and wore it. Rene worked the radio with the rock squid cover story as the calls grew more suspicious."
+    },
+    {
+      "id": "1105-236-3",
+      "start": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "end": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "title": "The assault on the ranch",
+      "type": "party",
+      "location": "Ranch / Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Ranch",
+          "slug": null
+        },
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        86
+      ],
+      "text": "The party attacked the ranch at sunset in three teams. The shutdown switch failed and the cameras stayed active. Aronis was badly wounded and appeared dead; Sarik's fire dropped Brigitte and wounded Gertrude."
+    },
+    {
+      "id": "1105-236-4",
+      "start": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "end": {
+        "day": 236,
+        "year": 1105,
+        "abs": 403560
+      },
+      "title": "Dr. Pearson found in the guest suite",
+      "type": "party",
+      "location": "Ranch / Hampton / Tutin",
+      "system": "Tutin",
+      "places": [
+        {
+          "name": "Ranch",
+          "slug": null
+        },
+        {
+          "name": "Hampton",
+          "slug": "hampton"
+        },
+        {
+          "name": "Tutin",
+          "slug": "tutin"
+        }
+      ],
+      "sessions": [
+        86
+      ],
+      "text": "Sarik found the unarmed Dr. Pearson hiding under a bed and had Tomas pull him out, keeping him alive. An unidentified man in full battle armor came down the stairs with a Gauss rifle."
     }
   ]
 }
